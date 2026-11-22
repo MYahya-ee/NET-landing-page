@@ -31,8 +31,17 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <nav className="w-full bg-[#FFFAEF] border-b-2 border-[#161310] px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="font-pixel text-base sm:text-xl text-[#161310] tracking-tight">
-            NET◆PLAYBOOK
+          <span className="font-pixel text-base sm:text-xl text-[#161310] tracking-tight flex items-center gap-1.5 sm:gap-2">
+            <span>NET</span>
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={22}
+              height={22}
+              className="w-4 h-4 sm:w-5 sm:h-5 object-contain inline-block -mt-0.5"
+              priority
+            />
+            <span>PLAYBOOK</span>
           </span>
         </div>
         <div className="flex items-center">
@@ -516,8 +525,16 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <footer className="w-full bg-[#161310] border-t border-[#6b6459]/20 px-4 sm:px-6 py-6 text-center space-y-2">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <span className="font-pixel text-sm text-[#FFFAEF]/50">
-            NET◆PLAYBOOK
+          <span className="font-pixel text-sm text-[#FFFAEF]/50 flex items-center gap-1.5">
+            <span>NET</span>
+            <Image
+              src="/images/logo.png"
+              alt="Logo"
+              width={16}
+              height={16}
+              className="w-3.5 h-3.5 object-contain opacity-75 inline-block -mt-0.5"
+            />
+            <span>PLAYBOOK</span>
           </span>
         </div>
         <p className="text-xs sm:text-sm text-[#FFFAEF]/60 font-normal">
