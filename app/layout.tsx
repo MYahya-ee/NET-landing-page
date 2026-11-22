@@ -1,10 +1,18 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 
 const googleSansFlex = localFont({
   src: "./fonts/GoogleSansFlex-Variable.ttf",
   variable: "--font-google-sans-flex",
+  display: "swap",
+});
+
+const pixelifySans = Pixelify_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-pixelify",
   display: "swap",
 });
 
@@ -26,7 +34,6 @@ export const metadata: Metadata = {
     "NET-2027",
     "KIPS FUNG",
     "NUST aggregate",
-    "FAST entry test",
   ],
   authors: [{ name: "Independent NET Achiever" }],
   openGraph: {
@@ -44,8 +51,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${googleSansFlex.variable} scroll-smooth antialiased`}>
-      <body className="min-h-screen bg-[#F7F3EC] text-[#1B1713] font-sans selection:bg-[#EFE9DF] selection:text-[#1B1713]">
+    <html
+      lang="en"
+      className={`${googleSansFlex.variable} ${pixelifySans.variable} scroll-smooth antialiased`}
+    >
+      <body className="min-h-screen bg-[#F7F3EC] text-[#1B1713] font-sans selection:bg-[#1B1713] selection:text-[#F7F3EC]">
         {children}
       </body>
     </html>

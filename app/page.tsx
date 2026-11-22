@@ -1,505 +1,561 @@
 import Image from "next/image";
 import FaqAccordion from "@/components/FaqAccordion";
 import Button from "@/components/Button";
+import Ticker from "@/components/Ticker";
 import {
-  Sparkles,
   ShieldCheck,
   Check,
   X,
   FileSpreadsheet,
+  Zap,
 } from "lucide-react";
 
 const TALLY_URL = "https://tally.so/r/4aKLGO";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F3EC] text-[#1B1713] font-sans antialiased overflow-x-hidden selection:bg-[#EFE9DF] selection:text-[#1B1713]">
-      {/* Top Banner Notice */}
-      <div className="w-full bg-[#EFE9DF] text-[#5C544B] text-xs sm:text-sm py-2 px-4 text-center font-normal border-b border-[#DDD6CB]">
-        <span>
-          Instant Email Delivery • Verified for{" "}
-          <strong className="text-[#1B1713] font-medium">NET-2027</strong>{" "}
-          Academic Cycle
-        </span>
-      </div>
+    <div className="min-h-screen flex flex-col bg-[#F7F3EC] text-[#1B1713] font-sans antialiased overflow-x-hidden">
+      {/* ═══════════════════════════════════════════
+          NAVIGATION BAR
+      ═══════════════════════════════════════════ */}
+      <nav className="w-full bg-[#F7F3EC] border-b-2 border-[#1B1713] px-4 sm:px-6 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <span className="font-pixel text-lg sm:text-xl text-[#1B1713] tracking-tight">
+            NET◆PLAYBOOK
+          </span>
+        </div>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="hidden sm:inline stamp text-[#1F4E3D]">
+            NET-2027
+          </span>
+          <Button
+            href={TALLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="primary"
+            className="text-sm py-2 px-4"
+          >
+            Get Playbook
+          </Button>
+        </div>
+      </nav>
 
-      <main className="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 space-y-12 sm:space-y-16">
-        {/* 1. HERO SECTION */}
-        <section className="text-center space-y-5 sm:space-y-6 pt-2 sm:pt-4">
-          {/* Accent rule: tiny high-signal detail (#1F4E3D) */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium tracking-wide bg-[#1F4E3D]/10 text-[#1F4E3D] border border-[#1F4E3D]/20">
-            <Sparkles className="w-3.5 h-3.5 text-[#1F4E3D] shrink-0" />
-            <span>NET-2027 EDITION • ENGINEERING &amp; COMPUTING</span>
+      {/* ═══════════════════════════════════════════
+          HERO SECTION
+      ═══════════════════════════════════════════ */}
+      <section className="w-full bg-[#F7F3EC] border-b-2 border-[#1B1713]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 text-center space-y-6 sm:space-y-8">
+          {/* Accent badge — small signal use of #1F4E3D */}
+          <div className="flex justify-center">
+            <span className="stamp text-[#1F4E3D]">
+              <Zap className="w-3 h-3" />
+              NET-2027 EDITION • ENGINEERING &amp; COMPUTING
+            </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-[-0.03em] text-[#1B1713] leading-[1.12]">
-            107 to 150: The NUST NET Playbook
+          {/* Pixel art heading */}
+          <h1 className="font-pixel text-4xl sm:text-6xl lg:text-7xl text-[#1B1713] leading-[1.1] tracking-tight">
+            107 TO 150.{" "}
+            <span className="text-[#1F4E3D]">THE NUST NET</span>{" "}
+            PLAYBOOK.
           </h1>
 
+          {/* Subheadline — Google Sans Flex, light weight */}
           <p className="text-base sm:text-xl text-[#5C544B] font-normal max-w-2xl mx-auto leading-relaxed">
             An independent student guide sharing the exact preparation system,
             subject routines, and timed FLP review method used to jump from 107
             to 150.
           </p>
 
-          <div className="pt-2 sm:pt-4 flex flex-col items-center">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
             <Button
               href={TALLY_URL}
               target="_blank"
               rel="noopener noreferrer"
               variant="primary"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto text-base"
             >
               Get the Playbook — 650 PKR
             </Button>
-
-            <p className="mt-3.5 text-xs sm:text-sm text-[#5C544B] font-normal flex items-center justify-center gap-1.5 text-center">
-              <ShieldCheck className="w-4 h-4 text-[#1F4E3D] shrink-0" />
-              <span>
-                PDF + Companion FLP Toolkit • Delivered via email after quick
-                payment verification
-              </span>
-            </p>
-          </div>
-        </section>
-
-        {/* 2. SCORE PROGRESSION STRIP */}
-        <section aria-labelledby="progression-heading" className="space-y-4">
-          <div className="text-center sm:text-left">
-            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
-              Proven Iteration
-            </span>
-            <h2
-              id="progression-heading"
-              className="text-xl sm:text-2xl font-normal tracking-[-0.02em] text-[#1B1713]"
+            <Button
+              href="#whats-inside"
+              variant="secondary"
+              className="w-full sm:w-auto text-base"
             >
-              The Score Progression
+              Explore Contents
+            </Button>
+          </div>
+
+          {/* Trust line */}
+          <p className="text-xs sm:text-sm text-[#5C544B] font-normal flex items-center justify-center gap-1.5">
+            <ShieldCheck className="w-4 h-4 text-[#1F4E3D] shrink-0" />
+            <span>
+              PDF + Companion FLP Toolkit • Delivered via email after quick
+              payment verification
+            </span>
+          </p>
+
+          {/* Sample Page Preview Cards (tilted, stacked) */}
+          <div className="flex justify-center gap-3 sm:gap-5 pt-4 sm:pt-6">
+            <div className="card-hard-sm -rotate-2 w-28 sm:w-40 aspect-[3/4] overflow-hidden hover:rotate-0 transition-transform duration-300">
+              <Image
+                src="/images/sample-1.png"
+                alt="Chapter Preparation Loop preview"
+                width={160}
+                height={213}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="card-hard-sm rotate-1 w-32 sm:w-44 aspect-[3/4] overflow-hidden z-10 hover:rotate-0 transition-transform duration-300">
+              <Image
+                src="/images/sample-2.png"
+                alt="3-Round Math Strategy preview"
+                width={176}
+                height={235}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="card-hard-sm -rotate-1 w-28 sm:w-40 aspect-[3/4] overflow-hidden hover:rotate-0 transition-transform duration-300">
+              <Image
+                src="/images/sample-3.png"
+                alt="FLP Toolkit preview"
+                width={160}
+                height={213}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          TICKER STRIP
+      ═══════════════════════════════════════════ */}
+      <Ticker />
+
+      {/* ═══════════════════════════════════════════
+          SCORE PROGRESSION
+      ═══════════════════════════════════════════ */}
+      <section className="w-full bg-[#EFE9DF] border-b-2 border-[#1B1713]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="text-center sm:text-left mb-8">
+            <span className="stamp text-[#1F4E3D] mb-3 inline-flex">
+              PROVEN ITERATION
+            </span>
+            <h2 className="font-pixel text-2xl sm:text-4xl text-[#1B1713] leading-tight mt-3">
+              AN ATLAS, <span className="text-[#1F4E3D]">SCORED IN</span>{" "}
+              3 ATTEMPTS.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4">
-            {/* Card 1: NET-2 */}
-            <div className="p-5 rounded-2xl bg-[#EFE9DF]/50 border border-[#DDD6CB] shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="flex items-baseline justify-between mb-2">
-                  <span className="text-[11px] font-medium uppercase px-2 py-0.5 rounded bg-[#E5DFD4] text-[#5C544B]">
-                    Attempt 1
-                  </span>
-                  <span className="text-xs text-[#5C544B] font-normal">Initial Baseline</span>
-                </div>
-                <div className="text-2xl font-medium text-[#1B1713] tracking-tight">
-                  NET-2: <span>107</span>
-                  <span className="text-[#5C544B] text-lg font-normal">/200</span>
-                </div>
-                <p className="mt-2.5 text-sm text-[#5C544B] font-normal leading-relaxed">
-                  Studied like a board exam; struggled under timed MCQ pressure.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+            {/* NET-2 */}
+            <div className="card-hard p-5 space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="stamp text-[#5C544B] text-[10px]">ATTEMPT 01</span>
+                <span className="text-xs text-[#5C544B] font-normal">
+                  Initial Baseline
+                </span>
               </div>
+              <div className="font-pixel text-3xl sm:text-4xl text-[#1B1713]">
+                107<span className="text-[#5C544B] text-xl">/200</span>
+              </div>
+              <hr className="divider-tear" />
+              <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
+                Studied like a board exam; struggled under timed MCQ pressure.
+              </p>
             </div>
 
-            {/* Card 2: NET-3 */}
-            <div className="p-5 rounded-2xl bg-[#EFE9DF]/50 border border-[#DDD6CB] shadow-sm flex flex-col justify-between">
-              <div>
-                <div className="flex items-baseline justify-between mb-2">
-                  <span className="text-[11px] font-medium uppercase px-2 py-0.5 rounded bg-[#E5DFD4] text-[#5C544B]">
-                    Attempt 2
-                  </span>
-                  <span className="text-xs font-medium text-[#1B1713]">+34 Points</span>
-                </div>
-                <div className="text-2xl font-medium text-[#1B1713] tracking-tight">
-                  NET-3: <span>141</span>
-                  <span className="text-[#5C544B] text-lg font-normal">/200</span>
-                </div>
-                <p className="mt-2.5 text-sm text-[#5C544B] font-normal leading-relaxed">
-                  Fixed Physics using a PTB-first method and targeted chapter loops.
-                </p>
+            {/* NET-3 */}
+            <div className="card-hard p-5 space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="stamp text-[#5C544B] text-[10px]">ATTEMPT 02</span>
+                <span className="text-xs font-medium text-[#1B1713]">
+                  +34 Points
+                </span>
               </div>
+              <div className="font-pixel text-3xl sm:text-4xl text-[#1B1713]">
+                141<span className="text-[#5C544B] text-xl">/200</span>
+              </div>
+              <hr className="divider-tear" />
+              <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
+                Fixed Physics using a PTB-first method and targeted chapter
+                loops.
+              </p>
             </div>
 
-            {/* Card 3: NET-4 */}
-            <div className="p-5 rounded-2xl bg-[#EFE9DF]/80 border-2 border-[#1F4E3D]/40 shadow-sm flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-[#1F4E3D] text-[#F7F3EC] text-[10px] font-medium uppercase px-3 py-0.5 rounded-bl-lg tracking-wider">
-                Top Score
+            {/* NET-4 — Top Score highlight */}
+            <div className="card-hard p-5 space-y-3 relative">
+              <div className="absolute -top-3 -right-2 bg-[#1F4E3D] text-[#F7F3EC] text-[10px] font-bold uppercase px-3 py-1 rounded border-2 border-[#1B1713] shadow-[2px_2px_0px_#1B1713] rotate-2">
+                ★ TOP SCORE
               </div>
-              <div>
-                <div className="flex items-baseline justify-between mb-2">
-                  <span className="text-[11px] font-medium uppercase px-2 py-0.5 rounded bg-[#1F4E3D]/10 text-[#1F4E3D]">
-                    Attempt 3
-                  </span>
-                  <span className="text-xs font-medium text-[#1F4E3D]">+9 Points</span>
-                </div>
-                <div className="text-2xl font-medium text-[#1B1713] tracking-tight">
-                  NET-4: <span className="text-[#1F4E3D]">150</span>
-                  <span className="text-[#5C544B] text-lg font-normal">/200</span>
-                </div>
-                <p className="mt-2.5 text-sm text-[#5C544B] font-normal leading-relaxed">
-                  Simulated 3-hour FLPs, reviewed every MCQ, and used a 3-round Math strategy.
-                </p>
+              <div className="flex items-center justify-between">
+                <span className="stamp text-[#1F4E3D] text-[10px]">ATTEMPT 03</span>
+                <span className="text-xs font-medium text-[#1F4E3D]">
+                  +9 Points
+                </span>
               </div>
+              <div className="font-pixel text-3xl sm:text-4xl text-[#1B1713]">
+                <span className="text-[#1F4E3D]">150</span>
+                <span className="text-[#5C544B] text-xl">/200</span>
+              </div>
+              <hr className="divider-tear" />
+              <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
+                Simulated 3-hour FLPs, reviewed every MCQ, and used a 3-round
+                Math strategy.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* 3. WHAT'S INSIDE (TABLE OF CONTENTS) */}
-        <section aria-labelledby="toc-heading" className="space-y-6">
-          <div className="text-center sm:text-left">
-            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
-              Curriculum &amp; Breakdown
+      {/* ═══════════════════════════════════════════
+          WHAT'S INSIDE (TABLE OF CONTENTS)
+      ═══════════════════════════════════════════ */}
+      <section
+        id="whats-inside"
+        className="w-full bg-[#F7F3EC] border-b-2 border-[#1B1713]"
+      >
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="text-center sm:text-left mb-8">
+            <span className="stamp text-[#1F4E3D] mb-3 inline-flex">
+              CURRICULUM &amp; BREAKDOWN
             </span>
-            <h2
-              id="toc-heading"
-              className="text-2xl sm:text-3xl font-normal tracking-[-0.02em] text-[#1B1713]"
-            >
-              What&apos;s Inside the Playbook
+            <h2 className="font-pixel text-2xl sm:text-4xl text-[#1B1713] leading-tight mt-3">
+              WHAT&apos;S INSIDE{" "}
+              <span className="text-[#1F4E3D]">THE PLAYBOOK.</span>
             </h2>
-            <p className="mt-1 text-sm sm:text-base text-[#5C544B] font-normal">
-              A comprehensive blueprint distilled into 5 core parts plus an analysis toolkit.
+            <p className="mt-2 text-sm sm:text-base text-[#5C544B] font-normal max-w-xl">
+              A comprehensive blueprint distilled into 5 core parts plus an
+              analysis toolkit.
             </p>
           </div>
 
           <div className="space-y-3">
-            {/* Part I */}
-            <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
-                01
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
-                  Part I: Get Clear Before You Prepare
-                </h3>
-                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
-                  Test pattern, eligibility rules, and subject weightings (50% Math, 30% Physics, 20% English).
-                </p>
-              </div>
-            </div>
-
-            {/* Part II */}
-            <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
-                02
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
-                  Part II: Build a System You Can Repeat
-                </h3>
-                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
-                  Baseline check, sticking to core resources, and the repeatable Chapter Preparation Loop.
-                </p>
-              </div>
-            </div>
-
-            {/* Part III */}
-            <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
-                03
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
-                  Part III: Prepare by Subject
-                </h3>
-                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
-                  Mathematics (lectures, notes, KIPS FUNG), Physics (PTB textbook-first + highlighting), and English.
-                </p>
-              </div>
-            </div>
-
-            {/* Part IV */}
-            <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
-                04
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
-                  Part IV: Turn Practice into Performance
-                </h3>
-                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
-                  Full-length practice paper review, the 3-round Mathematics time-management strategy, and final-days checklist.
-                </p>
-              </div>
-            </div>
-
-            {/* Part V */}
-            <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
-                05
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
-                  Part V: Behind the Scores
-                </h3>
-                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
-                  Full 107 → 141 → 150 breakdown and what I would do differently.
-                </p>
-              </div>
-            </div>
-
-            {/* Included Bonus */}
-            <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/80 border-2 border-[#1F4E3D]/30 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#1F4E3D]/10 text-[#1F4E3D] flex items-center justify-center font-medium text-xs shrink-0">
-                <FileSpreadsheet className="w-4 h-4" />
-              </div>
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
+            {[
+              {
+                num: "01",
+                title: "Part I: Get Clear Before You Prepare",
+                desc: "Test pattern, eligibility rules, and subject weightings (50% Math, 30% Physics, 20% English).",
+              },
+              {
+                num: "02",
+                title: "Part II: Build a System You Can Repeat",
+                desc: "Baseline check, sticking to core resources, and the repeatable Chapter Preparation Loop.",
+              },
+              {
+                num: "03",
+                title: "Part III: Prepare by Subject",
+                desc: "Mathematics (lectures, notes, KIPS FUNG), Physics (PTB textbook-first + highlighting), and English.",
+              },
+              {
+                num: "04",
+                title: "Part IV: Turn Practice into Performance",
+                desc: "Full-length practice paper review, the 3-round Mathematics time-management strategy, and final-days checklist.",
+              },
+              {
+                num: "05",
+                title: "Part V: Behind the Scores",
+                desc: "Full 107 → 141 → 150 breakdown and what I would do differently.",
+              },
+            ].map((part) => (
+              <div
+                key={part.num}
+                className="card-hard-flat p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start"
+              >
+                <span className="font-pixel text-lg text-[#5C544B] shrink-0 w-8">
+                  {part.num}
+                </span>
+                <div className="space-y-1">
                   <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
-                    Included Bonus: Companion FLP Performance &amp; Analysis Toolkit
+                    {part.title}
                   </h3>
-                  <span className="text-[10px] font-medium uppercase px-2 py-0.5 rounded bg-[#1F4E3D]/10 text-[#1F4E3D] tracking-wider">
-                    Bonus
-                  </span>
+                  <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
+                    {part.desc}
+                  </p>
                 </div>
+              </div>
+            ))}
+
+            {/* Bonus */}
+            <div className="card-hard p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start relative">
+              <div className="absolute -top-2.5 left-4 bg-[#1F4E3D] text-[#F7F3EC] text-[10px] font-bold uppercase px-2.5 py-0.5 rounded border border-[#1B1713] shadow-[2px_2px_0px_#1B1713]">
+                BONUS INCLUDED
+              </div>
+              <span className="shrink-0 w-8 h-8 rounded bg-[#1F4E3D]/10 text-[#1F4E3D] flex items-center justify-center mt-1">
+                <FileSpreadsheet className="w-4 h-4" />
+              </span>
+              <div className="space-y-1">
+                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
+                  Companion FLP Performance &amp; Analysis Toolkit
+                </h3>
                 <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
-                  4 structured analysis &amp; tracking sheets to diagnose chapter-level mistakes.
+                  4 structured analysis &amp; tracking sheets to diagnose
+                  chapter-level mistakes.
                 </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* 4. INSIDE THE PLAYBOOK (SAMPLE PAGES) */}
-        <section aria-labelledby="samples-heading" className="space-y-6">
-          <div className="text-center sm:text-left">
-            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
-              Preview Material
+      {/* ═══════════════════════════════════════════
+          SAMPLE PAGES
+      ═══════════════════════════════════════════ */}
+      <section className="w-full bg-[#EFE9DF] border-b-2 border-[#1B1713]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="text-center sm:text-left mb-8">
+            <span className="stamp text-[#1F4E3D] mb-3 inline-flex">
+              PREVIEW MATERIAL
             </span>
-            <h2
-              id="samples-heading"
-              className="text-2xl sm:text-3xl font-normal tracking-[-0.02em] text-[#1B1713]"
-            >
-              Inside the Playbook (Sample Pages)
+            <h2 className="font-pixel text-2xl sm:text-4xl text-[#1B1713] leading-tight mt-3">
+              INSIDE{" "}
+              <span className="text-[#1F4E3D]">THE PLAYBOOK.</span>
             </h2>
-            <p className="mt-1 text-sm sm:text-base text-[#5C544B] font-normal">
+            <p className="mt-2 text-sm sm:text-base text-[#5C544B] font-normal max-w-xl">
               Real previews and templates from inside the guide.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {/* Sample 1 */}
-            <div className="bg-[#EFE9DF]/40 rounded-2xl border border-[#DDD6CB] overflow-hidden shadow-sm flex flex-col">
-              <div className="relative aspect-[3/4] w-full bg-[#E5DFD4]/50 border-b border-[#DDD6CB]">
-                <Image
-                  src="/images/sample-1.png"
-                  alt="Sample 1 - The Chapter Preparation Loop"
-                  fill
-                  className="object-contain p-2"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="p-4 flex-1 flex flex-col justify-between">
-                <div>
-                  <span className="text-[10px] font-medium uppercase tracking-wider text-[#1F4E3D]">
-                    Sample 1
-                  </span>
-                  <h3 className="text-sm font-medium text-[#1B1713] mt-0.5">
-                    The Chapter Preparation Loop
-                  </h3>
-                  <p className="text-xs text-[#5C544B] font-normal mt-1 leading-relaxed">
-                    Systematic process for mastering core textbook concepts before attempting practice MCQs.
-                  </p>
+            {[
+              {
+                src: "/images/sample-1.png",
+                alt: "Sample 1 - The Chapter Preparation Loop",
+                label: "SYS.01",
+                title: "The Chapter Preparation Loop",
+                desc: "Systematic process for mastering core textbook concepts before attempting practice MCQs.",
+              },
+              {
+                src: "/images/sample-2.png",
+                alt: "Sample 2 - The 3-Round Mathematics Strategy",
+                label: "SYS.02",
+                title: "The 3-Round Math Strategy",
+                desc: "Clock management framework to answer 80 Mathematics MCQs without running out of time.",
+              },
+              {
+                src: "/images/sample-3.png",
+                alt: "Sample 3 - FLP Performance & Error Matrix",
+                label: "TOOLKIT",
+                title: "FLP Diagnosis & Tracking Sheet",
+                desc: "Granular tracking matrix to pinpoint whether errors are conceptual or calculation-based.",
+              },
+            ].map((sample, i) => (
+              <div key={i} className="card-hard overflow-hidden flex flex-col">
+                <div className="relative aspect-[3/4] w-full bg-[#F7F3EC] border-b-[1.5px] border-[#1B1713]">
+                  <Image
+                    src={sample.src}
+                    alt={sample.alt}
+                    fill
+                    className="object-contain p-3"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-4 flex-1 flex flex-col justify-between space-y-1.5">
+                  <div>
+                    <span className="font-pixel text-[10px] text-[#1F4E3D] uppercase">
+                      {sample.label}
+                    </span>
+                    <h3 className="text-sm font-medium text-[#1B1713] mt-0.5">
+                      {sample.title}
+                    </h3>
+                    <p className="text-xs text-[#5C544B] font-normal mt-1 leading-relaxed">
+                      {sample.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Sample 2 */}
-            <div className="bg-[#EFE9DF]/40 rounded-2xl border border-[#DDD6CB] overflow-hidden shadow-sm flex flex-col">
-              <div className="relative aspect-[3/4] w-full bg-[#E5DFD4]/50 border-b border-[#DDD6CB]">
-                <Image
-                  src="/images/sample-2.png"
-                  alt="Sample 2 - The 3-Round Mathematics Strategy"
-                  fill
-                  className="object-contain p-2"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="p-4 flex-1 flex flex-col justify-between">
-                <div>
-                  <span className="text-[10px] font-medium uppercase tracking-wider text-[#1F4E3D]">
-                    Sample 2
-                  </span>
-                  <h3 className="text-sm font-medium text-[#1B1713] mt-0.5">
-                    The 3-Round Math Strategy
-                  </h3>
-                  <p className="text-xs text-[#5C544B] font-normal mt-1 leading-relaxed">
-                    Clock management framework to answer 80 Mathematics MCQs without running out of time.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sample 3 */}
-            <div className="bg-[#EFE9DF]/40 rounded-2xl border border-[#DDD6CB] overflow-hidden shadow-sm flex flex-col">
-              <div className="relative aspect-[3/4] w-full bg-[#E5DFD4]/50 border-b border-[#DDD6CB]">
-                <Image
-                  src="/images/sample-3.png"
-                  alt="Sample 3 - FLP Performance & Error Matrix"
-                  fill
-                  className="object-contain p-2"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="p-4 flex-1 flex flex-col justify-between">
-                <div>
-                  <span className="text-[10px] font-medium uppercase tracking-wider text-[#1F4E3D]">
-                    Sample 3 • Toolkit
-                  </span>
-                  <h3 className="text-sm font-medium text-[#1B1713] mt-0.5">
-                    FLP Diagnosis &amp; Tracking Sheet
-                  </h3>
-                  <p className="text-xs text-[#5C544B] font-normal mt-1 leading-relaxed">
-                    Granular tracking matrix to pinpoint whether errors are conceptual or calculation-based.
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* 5. WHO IT'S FOR / NOT FOR */}
-        <section aria-labelledby="target-heading" className="space-y-6">
-          <div className="text-center sm:text-left">
-            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
-              Fit &amp; Expectations
+      {/* ═══════════════════════════════════════════
+          WHO IT'S FOR / NOT FOR
+      ═══════════════════════════════════════════ */}
+      <section className="w-full bg-[#F7F3EC] border-b-2 border-[#1B1713]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="text-center sm:text-left mb-8">
+            <span className="stamp text-[#1F4E3D] mb-3 inline-flex">
+              FIT &amp; EXPECTATIONS
             </span>
-            <h2
-              id="target-heading"
-              className="text-2xl sm:text-3xl font-normal tracking-[-0.02em] text-[#1B1713]"
-            >
-              Who It&apos;s For / Not For
+            <h2 className="font-pixel text-2xl sm:text-4xl text-[#1B1713] leading-tight mt-3">
+              THREE VOICES,{" "}
+              <span className="text-[#1F4E3D]">NEVER BLENDED.</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {/* Built For */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-[#EFE9DF]/60 border border-[#DDD6CB] space-y-4">
-              <div className="flex items-center gap-2 text-[#1B1713]">
-                <span className="w-5 h-5 rounded-full bg-[#1F4E3D]/10 text-[#1F4E3D] flex items-center justify-center shrink-0">
-                  <Check className="w-3.5 h-3.5 stroke-[2]" />
+            <div className="card-hard p-5 sm:p-6 space-y-4">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded bg-[#1F4E3D]/10 text-[#1F4E3D] flex items-center justify-center shrink-0">
+                  <Check className="w-4 h-4 stroke-[2]" />
                 </span>
-                <h3 className="text-lg font-medium">Built For</h3>
+                <h3 className="font-pixel text-lg text-[#1B1713]">
+                  Built For
+                </h3>
               </div>
-              <ul className="space-y-2.5 text-sm sm:text-base text-[#5C544B] font-normal leading-relaxed">
+              <ul className="space-y-3 text-sm sm:text-base text-[#5C544B] font-normal leading-relaxed">
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#1F4E3D] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    First-time and repeat NET-Engineering / Computing aspirants who want a clear, repeatable preparation system.
+                    First-time and repeat NET-Engineering / Computing aspirants
+                    who want a clear, repeatable preparation system.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#1F4E3D] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    Students feeling overwhelmed by multiple coaching books and seeking a streamlined resource priority.
+                    Students feeling overwhelmed by multiple coaching books and
+                    seeking a streamlined resource priority.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#1F4E3D] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    Aspirants scoring between 100 and 135 who need timed testing discipline to break past the 145+ barrier.
+                    Aspirants scoring between 100 and 135 who need timed testing
+                    discipline to break past the 145+ barrier.
                   </span>
                 </li>
               </ul>
             </div>
 
             {/* Not For */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-[#EFE9DF]/40 border border-[#DDD6CB] space-y-4">
-              <div className="flex items-center gap-2 text-[#1B1713]">
-                <span className="w-5 h-5 rounded-full bg-[#5C544B]/10 text-[#5C544B] flex items-center justify-center shrink-0">
-                  <X className="w-3.5 h-3.5 stroke-[2]" />
+            <div className="card-hard p-5 sm:p-6 space-y-4">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded bg-[#5C544B]/10 text-[#5C544B] flex items-center justify-center shrink-0">
+                  <X className="w-4 h-4 stroke-[2]" />
                 </span>
-                <h3 className="text-lg font-medium">Not For</h3>
+                <h3 className="font-pixel text-lg text-[#1B1713]">Not For</h3>
               </div>
-              <ul className="space-y-2.5 text-sm sm:text-base text-[#5C544B] font-normal leading-relaxed">
+              <ul className="space-y-3 text-sm sm:text-base text-[#5C544B] font-normal leading-relaxed">
                 <li className="flex items-start gap-2.5">
                   <X className="w-4 h-4 text-[#5C544B] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    NET-Business / Architecture students (this playbook is strictly engineered for Engineering &amp; Computing).
+                    NET-Business / Architecture students (this playbook is
+                    strictly engineered for Engineering &amp; Computing).
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <X className="w-4 h-4 text-[#5C544B] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    Anyone looking for a textbook replacement; you still need your PTB textbooks and practice papers.
+                    Anyone looking for a textbook replacement; you still need
+                    your PTB textbooks and practice papers.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <X className="w-4 h-4 text-[#5C544B] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    Anyone searching for a magic &quot;guaranteed score&quot; shortcut without doing the actual timed chapter practice.
+                    Anyone searching for a magic &quot;guaranteed score&quot;
+                    shortcut without doing the actual timed chapter practice.
                   </span>
                 </li>
               </ul>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* 6. FAQ SECTION (COLLAPSIBLE ACCORDION) */}
-        <section aria-labelledby="faq-heading" className="space-y-6">
-          <div className="text-center sm:text-left">
-            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
-              Clear Answers
+      {/* ═══════════════════════════════════════════
+          FAQ
+      ═══════════════════════════════════════════ */}
+      <section className="w-full bg-[#EFE9DF] border-b-2 border-[#1B1713]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="text-center sm:text-left mb-8">
+            <span className="stamp text-[#1F4E3D] mb-3 inline-flex">
+              FIELD LOG
             </span>
-            <h2
-              id="faq-heading"
-              className="text-2xl sm:text-3xl font-normal tracking-[-0.02em] text-[#1B1713]"
-            >
-              Frequently Asked Questions
+            <h2 className="font-pixel text-2xl sm:text-4xl text-[#1B1713] leading-tight mt-3">
+              FREQUENTLY <span className="text-[#1F4E3D]">ASKED.</span>
             </h2>
-            <p className="mt-1 text-sm sm:text-base text-[#5C544B] font-normal">
+            <p className="mt-2 text-sm sm:text-base text-[#5C544B] font-normal max-w-xl">
               Everything you need to know about payment, delivery, and format.
             </p>
           </div>
 
           <FaqAccordion />
-        </section>
+        </div>
+      </section>
 
-        {/* 7. FINAL CTA */}
-        <section className="bg-[#EFE9DF] border border-[#DDD6CB] rounded-3xl p-6 sm:p-10 text-center space-y-5 shadow-sm">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase bg-[#1F4E3D]/10 text-[#1F4E3D] border border-[#1F4E3D]/20">
-            Start Your Preparation Right
+      {/* ═══════════════════════════════════════════
+          FINAL CTA
+      ═══════════════════════════════════════════ */}
+      <section className="w-full bg-[#1B1713] border-b-2 border-[#1B1713]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 text-center space-y-6">
+          <span className="stamp text-[#1F4E3D] bg-[#1F4E3D]/10 border-[#1F4E3D]/30">
+            JOIN THE EXPEDITION
           </span>
 
-          <h2 className="text-2xl sm:text-4xl font-normal tracking-[-0.03em] text-[#1B1713] leading-[1.15]">
-            Ready to Take Control of Your NET Score?
+          <h2 className="font-pixel text-3xl sm:text-5xl text-[#F7F3EC] leading-tight">
+            READY TO{" "}
+            <span className="text-[#1F4E3D]">TAKE CONTROL?</span>
           </h2>
 
-          <p className="text-[#5C544B] text-base sm:text-lg font-normal max-w-xl mx-auto leading-relaxed">
-            Get instant access to the exact routines, the 3-round math strategy, and the companion FLP diagnostic sheets.
+          <p className="text-[#EFE9DF]/80 text-base sm:text-lg font-normal max-w-xl mx-auto leading-relaxed">
+            Get instant access to the exact routines, the 3-round math strategy,
+            and the companion FLP diagnostic sheets.
           </p>
 
-          <div className="pt-2 flex flex-col items-center">
-            <Button
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+            <a
               href={TALLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              variant="primary"
-              className="w-full sm:w-auto"
+              className="btn-brutal w-full sm:w-auto text-base py-3.5 px-7 rounded-lg border-2 border-[#F7F3EC]/20 bg-[#F7F3EC] text-[#1B1713] font-medium shadow-[4px_4px_0px_rgba(247,243,236,0.2)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_rgba(247,243,236,0.2)] transition-all"
             >
-              Get the Playbook — 650 PKR
-            </Button>
-
-            <p className="mt-3 text-xs sm:text-sm text-[#5C544B] font-normal">
-              Pay via Easypaisa, JazzCash, NayaPay, or SadaPay • Direct PDF &amp; Sheets email delivery
-            </p>
+              <span>Get the Playbook — 650 PKR</span>
+              <svg
+                className="w-4 h-4 shrink-0 btn-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 12h14m-7-7l7 7-7 7"
+                />
+              </svg>
+            </a>
           </div>
-        </section>
 
-        {/* Footer */}
-        <footer className="pt-8 pb-12 border-t border-[#DDD6CB] text-center space-y-2">
-          <p className="text-xs sm:text-sm text-[#5C544B] font-normal">
-            Independent student guide. Not an official NUST publication.
+          <p className="text-xs sm:text-sm text-[#EFE9DF]/60 font-normal">
+            Pay via Easypaisa, JazzCash, NayaPay, or SadaPay • Direct PDF &amp;
+            Sheets email delivery
           </p>
-          <p className="text-[11px] text-[#5C544B]/80 font-normal">
-            © 2027 The NUST NET Playbook. All rights reserved.
-          </p>
-        </footer>
-      </main>
+        </div>
+      </section>
 
-      {/* Mobile Bottom Fixed Bar for in-app Reddit browsing */}
+      {/* ═══════════════════════════════════════════
+          FOOTER
+      ═══════════════════════════════════════════ */}
+      <footer className="w-full bg-[#1B1713] border-t border-[#5C544B]/30 px-4 sm:px-6 py-6 text-center space-y-2">
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <span className="font-pixel text-sm text-[#F7F3EC]/60">
+            NET◆PLAYBOOK
+          </span>
+        </div>
+        <p className="text-xs sm:text-sm text-[#F7F3EC]/40 font-normal">
+          Independent student guide. Not an official NUST publication.
+        </p>
+        <p className="text-[11px] text-[#F7F3EC]/25 font-normal">
+          © 2027 The NUST NET Playbook. All rights reserved.
+        </p>
+      </footer>
+
+      {/* ═══════════════════════════════════════════
+          MOBILE BOTTOM BAR
+      ═══════════════════════════════════════════ */}
       <aside
         aria-label="Quick Action"
-        className="sm:hidden fixed bottom-0 left-0 right-0 p-3 bg-[#F7F3EC]/95 backdrop-blur border-t border-[#DDD6CB] z-50 flex items-center justify-between gap-3 shadow-sm"
+        className="sm:hidden fixed bottom-0 left-0 right-0 p-3 bg-[#F7F3EC] border-t-2 border-[#1B1713] z-50 flex items-center justify-between gap-3"
       >
         <div className="flex flex-col">
-          <span className="text-[11px] font-medium text-[#5C544B] uppercase tracking-wide">
-            NET-2027 Playbook
+          <span className="font-pixel text-[10px] text-[#5C544B] uppercase">
+            NET-2027
           </span>
           <span className="text-base font-medium text-[#1B1713] leading-none">
             650 PKR
@@ -510,7 +566,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           variant="primary"
-          className="py-2.5 px-4 text-sm"
+          className="py-2.5 px-5 text-sm"
         >
           Get Playbook
         </Button>

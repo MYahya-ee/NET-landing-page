@@ -45,7 +45,9 @@ export default function FaqAccordion() {
         return (
           <div
             key={index}
-            className="border border-[#DDD6CB] bg-[#EFE9DF]/50 hover:bg-[#EFE9DF]/80 rounded-xl overflow-hidden transition-all duration-200"
+            className={`card-hard-flat overflow-hidden transition-all duration-150 ${
+              isOpen ? "bg-[#FFFCF7]" : "bg-[#FFFCF7] hover:bg-[#F7F3EC]"
+            }`}
           >
             <button
               type="button"
@@ -53,10 +55,10 @@ export default function FaqAccordion() {
               className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-[#1B1713] transition-colors focus:outline-none"
               aria-expanded={isOpen}
             >
-              <span className="text-base sm:text-lg pr-4 font-normal flex items-center gap-2.5">
-                {isOpen && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#1F4E3D] shrink-0" />
-                )}
+              <span className="text-base sm:text-lg pr-4 font-normal flex items-center gap-3">
+                <span className="font-pixel text-xs text-[#5C544B]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <span>{faq.question}</span>
               </span>
               <ChevronDown
@@ -66,7 +68,7 @@ export default function FaqAccordion() {
               />
             </button>
             {isOpen && (
-              <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-[#5C544B] text-sm sm:text-base leading-relaxed border-t border-[#DDD6CB]/60 pt-3">
+              <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-[#5C544B] text-sm sm:text-base leading-relaxed border-t border-dashed border-[#DDD6CB] pt-3 ml-10 sm:ml-12">
                 {faq.answer}
               </div>
             )}
