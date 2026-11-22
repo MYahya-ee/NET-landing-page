@@ -56,7 +56,8 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 text-center space-y-6 sm:space-y-8">
           {/* Pixel heading — cobalt blue accent on key words, bold for readability */}
           <h1 className="font-pixel font-bold text-4xl sm:text-6xl lg:text-7xl text-[#161310] leading-[1.1] tracking-tight">
-            107 TO 150.{" "}
+            <span className="font-pixel-num">107</span> TO{" "}
+            <span className="font-pixel-num">150</span>.{" "}
             <span className="text-[#2E5DD6]">THE NUST NET</span>{" "}
             PLAYBOOK.
           </h1>
@@ -166,7 +167,7 @@ export default function Home() {
                   Starting point
                 </span>
               </div>
-              <div className="font-pixel text-3xl sm:text-4xl text-[#161310]">
+              <div className="font-pixel-num text-3xl sm:text-4xl text-[#161310]">
                 107<span className="text-[#6b6459] text-xl">/200</span>
               </div>
               <hr className="divider-tear" />
@@ -183,7 +184,7 @@ export default function Home() {
                   +34 Points
                 </span>
               </div>
-              <div className="font-pixel text-3xl sm:text-4xl text-[#161310]">
+              <div className="font-pixel-num text-3xl sm:text-4xl text-[#161310]">
                 141<span className="text-[#6b6459] text-xl">/200</span>
               </div>
               <hr className="divider-tear" />
@@ -204,7 +205,7 @@ export default function Home() {
                   +9 Points
                 </span>
               </div>
-              <div className="font-pixel text-3xl sm:text-4xl text-[#161310]">
+              <div className="font-pixel-num text-3xl sm:text-4xl text-[#161310]">
                 <span className="text-[#C4432B]">150</span>
                 <span className="text-[#6b6459] text-xl">/200</span>
               </div>
@@ -270,7 +271,7 @@ export default function Home() {
                 key={part.num}
                 className="card-hard-flat p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start"
               >
-                <span className="font-pixel text-lg text-[#6b6459] shrink-0 w-8">
+                <span className="font-pixel-num text-lg text-[#6b6459] shrink-0 w-8">
                   {part.num}
                 </span>
                 <div className="space-y-1">

@@ -56,7 +56,7 @@ export default function FaqAccordion() {
               aria-expanded={isOpen}
             >
               <span className="text-base sm:text-lg pr-4 font-normal flex items-center gap-3">
-                <span className="font-pixel text-xs text-[#6b6459] shrink-0">
+                <span className="font-pixel-num text-xs text-[#6b6459] shrink-0">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span>{faq.question}</span>
