@@ -186,3 +186,35 @@ body {
   border: 1.5px solid currentColor;
   border-radius: 0px;
 }
+
+/* ───── Subtle Minute Entry Animations ───── */
+@keyframes subtle-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-heading {
+  animation: subtle-fade-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+
+.animate-hero-sub {
+  animation: subtle-fade-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.animate-hero-cta {
+  animation: subtle-fade-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.animate-hero-trust {
+  animation: subtle-fade-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+
+.animate-hero-cards {
+  animation: subtle-fade-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}

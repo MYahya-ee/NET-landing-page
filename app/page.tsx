@@ -3,6 +3,7 @@ import FaqAccordion from "@/components/FaqAccordion";
 import Button from "@/components/Button";
 import Ticker from "@/components/Ticker";
 import MobileStickyBar from "@/components/MobileStickyBar";
+import ScrollReveal from "@/components/ScrollReveal";
 import {
   Check,
   X,
@@ -64,20 +65,20 @@ export default function Home() {
       <section className="w-full bg-[#FFFAEF] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 text-center space-y-6 sm:space-y-8">
           {/* Pixel heading — cobalt blue accent on key words */}
-          <h1 className="font-pixel-num font-normal text-[2.75rem] sm:text-7xl lg:text-8xl text-[#161310] leading-[0.98] sm:leading-[0.90] lg:leading-[0.88] tracking-tight">
+          <h1 className="font-pixel-num font-normal text-[2.75rem] sm:text-7xl lg:text-8xl text-[#161310] leading-[0.98] sm:leading-[0.90] lg:leading-[0.88] tracking-tight animate-hero-heading">
             107 TO 150.{" "}
             <span className="text-[#2E5DD6]">THE NUST NET</span>{" "}
             PLAYBOOK.
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-xl text-[#161310]/85 font-medium max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-[#161310]/85 font-medium max-w-2xl mx-auto leading-relaxed animate-hero-sub">
             A guide sharing the exact preparation system, subject routines, and
             timed FLP review method used to jump from 107 to 150.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 animate-hero-cta">
             <a
               href={TALLY_URL}
               target="_blank"
@@ -109,13 +110,13 @@ export default function Home() {
           </div>
 
           {/* Trust line */}
-          <p className="text-xs sm:text-sm text-[#6B6459] font-normal text-center">
+          <p className="text-xs sm:text-sm text-[#6B6459] font-normal text-center animate-hero-trust">
             PDF + Companion FLP Toolkit • Delivered via email after quick
             payment verification
           </p>
 
           {/* Tilted preview cards */}
-          <div className="flex justify-center gap-3 sm:gap-5 pt-4 sm:pt-6">
+          <div className="flex justify-center gap-3 sm:gap-5 pt-4 sm:pt-6 animate-hero-cards">
             <div className="card-hard-sm -rotate-2 w-28 sm:w-40 aspect-[1/1.414] overflow-hidden hover:rotate-0 transition-transform duration-300 bg-white">
               <Image
                 src="/images/sample-2.png"
@@ -157,71 +158,79 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <section className="w-full bg-[#FFFAEF] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <div className="text-center sm:text-left mb-8">
-            <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              MY RESULTS
-            </span>
-            <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
-              My score in 3 attempts
-            </h2>
-          </div>
+          <ScrollReveal>
+            <div className="text-center sm:text-left mb-8">
+              <span className="stamp text-[#6b6459] mb-3 inline-flex">
+                MY RESULTS
+              </span>
+              <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
+                My score in 3 attempts
+              </h2>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
             {/* NET-2 */}
-            <div className="card-hard p-5 space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="stamp text-[#6b6459] text-[10px]">ATTEMPT 01</span>
-                <span className="text-xs text-[#6b6459] font-normal">
-                  Starting point
-                </span>
+            <ScrollReveal delayMs={0}>
+              <div className="card-hard p-5 space-y-3 h-full">
+                <div className="flex items-center justify-between">
+                  <span className="stamp text-[#6b6459] text-[10px]">ATTEMPT 01</span>
+                  <span className="text-xs text-[#6b6459] font-normal">
+                    Starting point
+                  </span>
+                </div>
+                <div className="font-pixel-num text-3xl sm:text-4xl text-[#161310]">
+                  107<span className="text-[#6b6459] text-xl">/200</span>
+                </div>
+                <hr className="divider-tear" />
+                <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
+                  Studied like a board exam; struggled under timed MCQ pressure.
+                </p>
               </div>
-              <div className="font-pixel-num text-3xl sm:text-4xl text-[#161310]">
-                107<span className="text-[#6b6459] text-xl">/200</span>
-              </div>
-              <hr className="divider-tear" />
-              <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
-                Studied like a board exam; struggled under timed MCQ pressure.
-              </p>
-            </div>
+            </ScrollReveal>
 
             {/* NET-3 */}
-            <div className="card-hard p-5 space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="stamp text-[#6b6459] text-[10px]">ATTEMPT 02</span>
-                <span className="text-xs font-medium text-[#161310]">
-                  +34 Points
-                </span>
+            <ScrollReveal delayMs={75}>
+              <div className="card-hard p-5 space-y-3 h-full">
+                <div className="flex items-center justify-between">
+                  <span className="stamp text-[#6b6459] text-[10px]">ATTEMPT 02</span>
+                  <span className="text-xs font-medium text-[#161310]">
+                    +34 Points
+                  </span>
+                </div>
+                <div className="font-pixel-num text-3xl sm:text-4xl text-[#161310]">
+                  141<span className="text-[#6b6459] text-xl">/200</span>
+                </div>
+                <hr className="divider-tear" />
+                <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
+                  Fixed Physics using a PTB-first method and targeted chapter
+                  loops.
+                </p>
               </div>
-              <div className="font-pixel-num text-3xl sm:text-4xl text-[#161310]">
-                141<span className="text-[#6b6459] text-xl">/200</span>
-              </div>
-              <hr className="divider-tear" />
-              <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
-                Fixed Physics using a PTB-first method and targeted chapter
-                loops.
-              </p>
-            </div>
+            </ScrollReveal>
 
             {/* NET-4 — Best Score */}
-            <div className="card-hard p-5 space-y-3 relative">
-              <div className="absolute -top-3 -right-2 bg-[#C4432B] text-[#FFFAEF] text-[10px] font-bold uppercase px-3 py-1 border-2 border-[#161310] shadow-[2px_2px_0px_#161310] rotate-2">
-                ★ BEST SCORE
+            <ScrollReveal delayMs={150}>
+              <div className="card-hard p-5 space-y-3 relative h-full">
+                <div className="absolute -top-3 -right-2 bg-[#C4432B] text-[#FFFAEF] text-[10px] font-bold uppercase px-3 py-1 border-2 border-[#161310] shadow-[2px_2px_0px_#161310] rotate-2">
+                  ★ BEST SCORE
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="stamp text-[#2E5DD6] text-[10px]">ATTEMPT 03</span>
+                  <span className="text-xs font-medium text-[#C4432B]">
+                    +9 Points
+                  </span>
+                </div>
+                <div className="font-pixel-num text-3xl sm:text-4xl text-[#161310]">
+                  <span className="text-[#C4432B]">150</span>
+                  <span className="text-[#6b6459] text-xl">/200</span>
+                </div>
+                <hr className="divider-tear" />
+                <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
+                  I practiced full 3-hour papers, checked every MCQ afterward, and used a 3-round method for Math.
+                </p>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="stamp text-[#2E5DD6] text-[10px]">ATTEMPT 03</span>
-                <span className="text-xs font-medium text-[#C4432B]">
-                  +9 Points
-                </span>
-              </div>
-              <div className="font-pixel-num text-3xl sm:text-4xl text-[#161310]">
-                <span className="text-[#C4432B]">150</span>
-                <span className="text-[#6b6459] text-xl">/200</span>
-              </div>
-              <hr className="divider-tear" />
-              <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
-                I practiced full 3-hour papers, checked every MCQ afterward, and used a 3-round method for Math.
-              </p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -234,18 +243,20 @@ export default function Home() {
         className="w-full bg-[#F2EAD6] border-b-2 border-[#161310]"
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <div className="text-center sm:text-left mb-8">
-            <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              WHAT YOU GET
-            </span>
-            <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
-              WHAT&apos;S INSIDE{" "}
-              <span className="text-[#C4432B]">THE PLAYBOOK.</span>
-            </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#6b6459] font-normal max-w-xl">
-              5 short parts, plus a toolkit to track your mistakes.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center sm:text-left mb-8">
+              <span className="stamp text-[#6b6459] mb-3 inline-flex">
+                WHAT YOU GET
+              </span>
+              <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
+                WHAT&apos;S INSIDE{" "}
+                <span className="text-[#C4432B]">THE PLAYBOOK.</span>
+              </h2>
+              <p className="mt-2 text-sm sm:text-base text-[#6b6459] font-normal max-w-xl">
+                5 short parts, plus a toolkit to track your mistakes.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="space-y-3">
             {[
@@ -274,42 +285,43 @@ export default function Home() {
                 title: "Part V: Behind the Scores",
                 desc: "Full 107 → 141 → 150 breakdown and what I would do differently.",
               },
-            ].map((part) => (
-              <div
-                key={part.num}
-                className="card-hard-flat p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start"
-              >
-                <span className="font-pixel-num text-lg text-[#6b6459] shrink-0 w-8">
-                  {part.num}
-                </span>
-                <div className="space-y-1">
-                  <h3 className="text-base sm:text-lg font-medium text-[#161310]">
-                    {part.title}
-                  </h3>
-                  <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
-                    {part.desc}
-                  </p>
+            ].map((part, i) => (
+              <ScrollReveal key={part.num} delayMs={i * 40}>
+                <div className="card-hard-flat p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
+                  <span className="font-pixel-num text-lg text-[#6b6459] shrink-0 w-8">
+                    {part.num}
+                  </span>
+                  <div className="space-y-1">
+                    <h3 className="text-base sm:text-lg font-medium text-[#161310]">
+                      {part.title}
+                    </h3>
+                    <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
+                      {part.desc}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
 
             {/* Bonus */}
-            <div className="card-hard p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start relative">
-              <div className="absolute -top-2.5 left-4 bg-[#2D6A4F] text-[#FFFAEF] text-[10px] font-bold uppercase px-2.5 py-0.5 border border-[#161310] shadow-[2px_2px_0px_#161310]">
-                BONUS INCLUDED
+            <ScrollReveal delayMs={200}>
+              <div className="card-hard p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start relative">
+                <div className="absolute -top-2.5 left-4 bg-[#2D6A4F] text-[#FFFAEF] text-[10px] font-bold uppercase px-2.5 py-0.5 border border-[#161310] shadow-[2px_2px_0px_#161310]">
+                  BONUS INCLUDED
+                </div>
+                <span className="shrink-0 w-8 h-8 bg-[#2D6A4F]/10 text-[#2D6A4F] flex items-center justify-center mt-1">
+                  <FileSpreadsheet className="w-4 h-4" />
+                </span>
+                <div className="space-y-1">
+                  <h3 className="text-base sm:text-lg font-medium text-[#161310]">
+                    Practice Paper Toolkit
+                  </h3>
+                  <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
+                    4 simple sheets to track your practice papers and find which chapters are costing you marks.
+                  </p>
+                </div>
               </div>
-              <span className="shrink-0 w-8 h-8 bg-[#2D6A4F]/10 text-[#2D6A4F] flex items-center justify-center mt-1">
-                <FileSpreadsheet className="w-4 h-4" />
-              </span>
-              <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-medium text-[#161310]">
-                  Practice Paper Toolkit
-                </h3>
-                <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
-                  4 simple sheets to track your practice papers and find which chapters are costing you marks.
-                </p>
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -319,17 +331,19 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <section className="w-full bg-[#FFFAEF] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <div className="text-center sm:text-left mb-8">
-            <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              SNEAK PEEK
-            </span>
-            <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
-              A look inside
-            </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#6b6459] font-normal max-w-xl">
-              Real pages from the guide.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center sm:text-left mb-8">
+              <span className="stamp text-[#6b6459] mb-3 inline-flex">
+                SNEAK PEEK
+              </span>
+              <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
+                A look inside
+              </h2>
+              <p className="mt-2 text-sm sm:text-base text-[#6b6459] font-normal max-w-xl">
+                Real pages from the guide.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
@@ -355,30 +369,32 @@ export default function Home() {
                 desc: "A simple routine you repeat for every chapter, which you can consistently execute and repeat",
               },
             ].map((sample, i) => (
-              <div key={i} className="card-hard overflow-hidden flex flex-col">
-                <div className="relative aspect-[1/1.414] w-full bg-[#F2EAD6] border-b-[1.5px] border-[#161310]">
-                  <Image
-                    src={sample.src}
-                    alt={sample.alt}
-                    fill
-                    className="object-contain p-2"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="p-4 flex-1 flex flex-col justify-between space-y-1.5">
-                  <div>
-                    <span className="font-pixel text-[10px] text-[#2E5DD6] uppercase">
-                      {sample.label}
-                    </span>
-                    <h3 className="text-sm font-medium text-[#161310] mt-0.5">
-                      {sample.title}
-                    </h3>
-                    <p className="text-xs text-[#6b6459] font-normal mt-1 leading-relaxed">
-                      {sample.desc}
-                    </p>
+              <ScrollReveal key={i} delayMs={i * 80} className="h-full">
+                <div className="card-hard overflow-hidden flex flex-col h-full">
+                  <div className="relative aspect-[1/1.414] w-full bg-[#F2EAD6] border-b-[1.5px] border-[#161310]">
+                    <Image
+                      src={sample.src}
+                      alt={sample.alt}
+                      fill
+                      className="object-contain p-2"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-4 flex-1 flex flex-col justify-between space-y-1.5">
+                    <div>
+                      <span className="font-pixel text-[10px] text-[#2E5DD6] uppercase">
+                        {sample.label}
+                      </span>
+                      <h3 className="text-sm font-medium text-[#161310] mt-0.5">
+                        {sample.title}
+                      </h3>
+                      <p className="text-xs text-[#6b6459] font-normal mt-1 leading-relaxed">
+                        {sample.desc}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -389,81 +405,87 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <section className="w-full bg-[#F2EAD6] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <div className="text-center sm:text-left mb-8">
-            <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              IS THIS FOR YOU?
-            </span>
-            <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
-              Check before you buy
-            </h2>
-          </div>
+          <ScrollReveal>
+            <div className="text-center sm:text-left mb-8">
+              <span className="stamp text-[#6b6459] mb-3 inline-flex">
+                IS THIS FOR YOU?
+              </span>
+              <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
+                Check before you buy
+              </h2>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {/* Built For */}
-            <div className="card-hard p-5 sm:p-6 space-y-4">
-              <div className="flex items-center gap-2">
-                <span className="w-6 h-6 bg-[#2D6A4F]/10 text-[#2D6A4F] flex items-center justify-center shrink-0">
-                  <Check className="w-4 h-4 stroke-[2]" />
-                </span>
-                <h3 className="font-pixel text-lg text-[#161310]">
-                  This is for you if:
-                </h3>
+            <ScrollReveal delayMs={0} className="h-full">
+              <div className="card-hard p-5 sm:p-6 space-y-4 h-full">
+                <div className="flex items-center gap-2">
+                  <span className="w-6 h-6 bg-[#2D6A4F]/10 text-[#2D6A4F] flex items-center justify-center shrink-0">
+                    <Check className="w-4 h-4 stroke-[2]" />
+                  </span>
+                  <h3 className="font-pixel text-lg text-[#161310]">
+                    This is for you if:
+                  </h3>
+                </div>
+                <ul className="space-y-3 text-sm sm:text-base text-[#6b6459] font-normal leading-relaxed">
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-[#2D6A4F] shrink-0 mt-1 stroke-[2]" />
+                    <span>
+                      You&apos;re preparing for NET Engineering or Computing (first attempt or retake) and want a clear plan.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-[#2D6A4F] shrink-0 mt-1 stroke-[2]" />
+                    <span>
+                      You feel lost because there are too many books and you don&apos;t know which ones matter.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-[#2D6A4F] shrink-0 mt-1 stroke-[2]" />
+                    <span>
+                      You&apos;re scoring between 100 and 135 and want to reach 145+ by practicing under time pressure.
+                    </span>
+                  </li>
+                </ul>
               </div>
-              <ul className="space-y-3 text-sm sm:text-base text-[#6b6459] font-normal leading-relaxed">
-                <li className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#2D6A4F] shrink-0 mt-1 stroke-[2]" />
-                  <span>
-                    You&apos;re preparing for NET Engineering or Computing (first attempt or retake) and want a clear plan.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#2D6A4F] shrink-0 mt-1 stroke-[2]" />
-                  <span>
-                    You feel lost because there are too many books and you don&apos;t know which ones matter.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#2D6A4F] shrink-0 mt-1 stroke-[2]" />
-                  <span>
-                    You&apos;re scoring between 100 and 135 and want to reach 145+ by practicing under time pressure.
-                  </span>
-                </li>
-              </ul>
-            </div>
+            </ScrollReveal>
 
             {/* Not For */}
-            <div className="card-hard p-5 sm:p-6 space-y-4">
-              <div className="flex items-center gap-2">
-                <span className="w-6 h-6 bg-[#6b6459]/10 text-[#6b6459] flex items-center justify-center shrink-0">
-                  <X className="w-4 h-4 stroke-[2]" />
-                </span>
-                <h3 className="font-pixel text-lg text-[#161310]">
-                  This is NOT for you if:
-                </h3>
+            <ScrollReveal delayMs={80} className="h-full">
+              <div className="card-hard p-5 sm:p-6 space-y-4 h-full">
+                <div className="flex items-center gap-2">
+                  <span className="w-6 h-6 bg-[#6b6459]/10 text-[#6b6459] flex items-center justify-center shrink-0">
+                    <X className="w-4 h-4 stroke-[2]" />
+                  </span>
+                  <h3 className="font-pixel text-lg text-[#161310]">
+                    This is NOT for you if:
+                  </h3>
+                </div>
+                <ul className="space-y-3 text-sm sm:text-base text-[#6b6459] font-normal leading-relaxed">
+                  <li className="flex items-start gap-2.5">
+                    <X className="w-4 h-4 text-[#6b6459] shrink-0 mt-1 stroke-[2]" />
+                    <span>
+                      NET-Business / Architecture students (this playbook is
+                      strictly engineered for Engineering &amp; Computing).
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <X className="w-4 h-4 text-[#6b6459] shrink-0 mt-1 stroke-[2]" />
+                    <span>
+                      Anyone looking for a textbook replacement; you still need
+                      your PTB textbooks and practice papers.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <X className="w-4 h-4 text-[#6b6459] shrink-0 mt-1 stroke-[2]" />
+                    <span>
+                      You want a shortcut or a guaranteed score. This only works if you do the practice.
+                    </span>
+                  </li>
+                </ul>
               </div>
-              <ul className="space-y-3 text-sm sm:text-base text-[#6b6459] font-normal leading-relaxed">
-                <li className="flex items-start gap-2.5">
-                  <X className="w-4 h-4 text-[#6b6459] shrink-0 mt-1 stroke-[2]" />
-                  <span>
-                    NET-Business / Architecture students (this playbook is
-                    strictly engineered for Engineering &amp; Computing).
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <X className="w-4 h-4 text-[#6b6459] shrink-0 mt-1 stroke-[2]" />
-                  <span>
-                    Anyone looking for a textbook replacement; you still need
-                    your PTB textbooks and practice papers.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <X className="w-4 h-4 text-[#6b6459] shrink-0 mt-1 stroke-[2]" />
-                  <span>
-                    You want a shortcut or a guaranteed score. This only works if you do the practice.
-                  </span>
-                </li>
-              </ul>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -473,19 +495,23 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <section className="w-full bg-[#FFFAEF] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <div className="text-center sm:text-left mb-8">
-            <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              FAQ
-            </span>
-            <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
-              Common questions
-            </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#6b6459] font-normal max-w-xl">
-              Quick answers about payment, delivery, and format.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center sm:text-left mb-8">
+              <span className="stamp text-[#6b6459] mb-3 inline-flex">
+                FAQ
+              </span>
+              <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
+                Common questions
+              </h2>
+              <p className="mt-2 text-sm sm:text-base text-[#6b6459] font-normal max-w-xl">
+                Quick answers about payment, delivery, and format.
+              </p>
+            </div>
+          </ScrollReveal>
 
-          <FaqAccordion />
+          <ScrollReveal delayMs={60}>
+            <FaqAccordion />
+          </ScrollReveal>
         </div>
       </section>
 
@@ -494,29 +520,31 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <section className="w-full bg-[#161310] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 text-center space-y-6">
-          <h2 className="font-pixel text-3xl sm:text-5xl text-[#FFFAEF] leading-tight">
-            Ready to raise your NET score?
-          </h2>
+          <ScrollReveal>
+            <h2 className="font-pixel text-3xl sm:text-5xl text-[#FFFAEF] leading-tight">
+              Ready to raise your NET score?
+            </h2>
 
-          <p className="text-[#FFFAEF]/80 text-base sm:text-lg font-normal max-w-xl mx-auto leading-relaxed">
-            Get the full study plan, the 3-round Math method, and the practice paper tracking sheets.
-          </p>
+            <p className="text-[#FFFAEF]/80 text-base sm:text-lg font-normal max-w-xl mx-auto leading-relaxed mt-4">
+              Get the full study plan, the 3-round Math method, and the practice paper tracking sheets.
+            </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-            <a
-              href={TALLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-brutal w-full sm:w-auto text-base py-3.5 px-7 border-2 border-[#FFFAEF]/20 bg-[#2E5DD6] text-white font-medium shadow-[4px_4px_0px_rgba(255,250,239,0.15)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_rgba(255,250,239,0.15)] transition-all"
-            >
-              <span>Get the Playbook — 650 PKR</span>
-              <svg className="w-4 h-4 shrink-0 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-7-7l7 7-7 7" /></svg>
-            </a>
-          </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6">
+              <a
+                href={TALLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-brutal w-full sm:w-auto text-base py-3.5 px-7 border-2 border-[#FFFAEF]/20 bg-[#2E5DD6] text-white font-medium shadow-[4px_4px_0px_rgba(255,250,239,0.15)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_rgba(255,250,239,0.15)] transition-all"
+              >
+                <span>Get the Playbook — 650 PKR</span>
+                <svg className="w-4 h-4 shrink-0 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-7-7l7 7-7 7" /></svg>
+              </a>
+            </div>
 
-          <p className="text-xs sm:text-sm text-[#FFFAEF]/60 font-normal">
-            Pay with Easypaisa, JazzCash, NayaPay, or SadaPay • PDF and sheets sent to your email
-          </p>
+            <p className="text-xs sm:text-sm text-[#FFFAEF]/60 font-normal mt-4">
+              Pay with Easypaisa, JazzCash, NayaPay, or SadaPay • PDF and sheets sent to your email
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
