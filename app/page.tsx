@@ -55,25 +55,25 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════════ */}
-      <section className="w-full bg-[#161310] border-b-2 border-[#161310]">
+      <section className="w-full bg-[#FFFAEF] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 text-center space-y-6 sm:space-y-8">
-          {/* Badge — forest green stamp */}
+          {/* Badge — stamp */}
           <div className="flex justify-center">
-            <span className="stamp text-[#2D6A4F] border-[#2D6A4F]/50 bg-[#2D6A4F]/10">
+            <span className="stamp text-[#2D6A4F] border-[#2D6A4F] bg-[#2D6A4F]/10">
               <Zap className="w-3 h-3" />
               NET-2027 EDITION • ENGINEERING &amp; COMPUTING
             </span>
           </div>
 
-          {/* Pixel heading — terracotta accent on key words */}
-          <h1 className="font-pixel text-4xl sm:text-6xl lg:text-7xl text-[#FFFAEF] leading-[1.1] tracking-tight">
+          {/* Pixel heading — cobalt blue accent on key words */}
+          <h1 className="font-pixel text-4xl sm:text-6xl lg:text-7xl text-[#161310] leading-[1.1] tracking-tight">
             107 TO 150.{" "}
-            <span className="text-[#C4432B]">THE NUST NET</span>{" "}
+            <span className="text-[#2E5DD6]">THE NUST NET</span>{" "}
             PLAYBOOK.
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-xl text-[#FFFAEF]/70 font-normal max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-[#6B6459] font-normal max-w-2xl mx-auto leading-relaxed">
             An independent student guide sharing the exact preparation system,
             subject routines, and timed FLP review method used to jump from 107
             to 150.
@@ -88,19 +88,31 @@ export default function Home() {
               className="btn-brutal btn-brutal-cobalt w-full sm:w-auto text-base"
             >
               <span>Get the Playbook — 650 PKR</span>
-              <svg className="w-4 h-4 shrink-0 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-7-7l7 7-7 7" /></svg>
+              <svg
+                className="w-4 h-4 shrink-0 btn-arrow"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 12h14m-7-7l7 7-7 7"
+                />
+              </svg>
             </a>
             <Button
               href="#whats-inside"
               variant="secondary"
-              className="w-full sm:w-auto text-base bg-[#FFFAEF]/10 text-[#FFFAEF] border-[#FFFAEF]/30 hover:bg-[#FFFAEF]/20 shadow-[4px_4px_0px_rgba(255,250,239,0.15)] hover:shadow-[3px_3px_0px_rgba(255,250,239,0.15)]"
+              className="w-full sm:w-auto text-base"
             >
               Explore Contents
             </Button>
           </div>
 
           {/* Trust line */}
-          <p className="text-xs sm:text-sm text-[#FFFAEF]/50 font-normal flex items-center justify-center gap-1.5">
+          <p className="text-xs sm:text-sm text-[#6B6459] font-normal flex items-center justify-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-[#2D6A4F] shrink-0" />
             <span>
               PDF + Companion FLP Toolkit • Delivered via email after quick
@@ -110,7 +122,7 @@ export default function Home() {
 
           {/* Tilted preview cards */}
           <div className="flex justify-center gap-3 sm:gap-5 pt-4 sm:pt-6">
-            <div className="card-hard-sm -rotate-2 w-28 sm:w-40 aspect-[3/4] overflow-hidden hover:rotate-0 transition-transform duration-300 border-[#FFFAEF]/30">
+            <div className="card-hard-sm -rotate-2 w-28 sm:w-40 aspect-[3/4] overflow-hidden hover:rotate-0 transition-transform duration-300">
               <Image
                 src="/images/sample-1.png"
                 alt="Chapter Preparation Loop preview"
@@ -119,7 +131,7 @@ export default function Home() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="card-hard-sm rotate-1 w-32 sm:w-44 aspect-[3/4] overflow-hidden z-10 hover:rotate-0 transition-transform duration-300 border-[#FFFAEF]/30">
+            <div className="card-hard-sm rotate-1 w-32 sm:w-44 aspect-[3/4] overflow-hidden z-10 hover:rotate-0 transition-transform duration-300">
               <Image
                 src="/images/sample-2.png"
                 alt="3-Round Math Strategy preview"
@@ -128,7 +140,7 @@ export default function Home() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="card-hard-sm -rotate-1 w-28 sm:w-40 aspect-[3/4] overflow-hidden hover:rotate-0 transition-transform duration-300 border-[#FFFAEF]/30">
+            <div className="card-hard-sm -rotate-1 w-28 sm:w-40 aspect-[3/4] overflow-hidden hover:rotate-0 transition-transform duration-300">
               <Image
                 src="/images/sample-3.png"
                 alt="FLP Toolkit preview"
