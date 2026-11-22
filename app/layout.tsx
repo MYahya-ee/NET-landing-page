@@ -55,7 +55,7 @@ export default function RootLayout({
       lang="en"
       className={`${googleSansFlex.variable} ${pixelifySans.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#F7F3EC] text-[#1B1713] font-sans selection:bg-[#1B1713] selection:text-[#F7F3EC]">
+      <body className="min-h-screen bg-[#FFFAEF] text-[#161310] font-sans selection:bg-[#161310] selection:text-[#FFFAEF]">
         {children}
       </body>
     </html>

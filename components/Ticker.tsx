@@ -10,9 +10,7 @@ export default function Ticker() {
     "PDF + TOOLKIT",
   ];
 
-  const separator = (
-    <span className="mx-4 text-[#1F4E3D]">◆</span>
-  );
+  const separator = <span className="mx-4 text-[#C4432B]">◆</span>;
 
   const renderItems = () =>
     items.map((item, i) => (
@@ -25,7 +23,7 @@ export default function Ticker() {
     ));
 
   return (
-    <div className="w-full bg-[#1B1713] text-[#F7F3EC] border-y-2 border-[#1B1713] overflow-hidden py-2.5 select-none">
+    <div className="w-full bg-[#161310] text-[#FFFAEF] border-y-2 border-[#161310] overflow-hidden py-2.5 select-none">
       <div className="ticker-track">
         <div className="flex items-center">{renderItems()}</div>
         <div className="flex items-center" aria-hidden="true">
