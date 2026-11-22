@@ -4,7 +4,6 @@ import Button from "@/components/Button";
 import Ticker from "@/components/Ticker";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import {
-  ShieldCheck,
   Check,
   X,
   FileSpreadsheet,
@@ -101,12 +100,9 @@ export default function Home() {
           </div>
 
           {/* Trust line */}
-          <p className="text-xs sm:text-sm text-[#6B6459] font-normal flex items-center justify-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-[#2D6A4F] shrink-0" />
-            <span>
-              PDF + Companion FLP Toolkit • Delivered via email after quick
-              payment verification
-            </span>
+          <p className="text-xs sm:text-sm text-[#6B6459] font-normal text-center">
+            PDF + Companion FLP Toolkit • Delivered via email after quick
+            payment verification
           </p>
 
           {/* Tilted preview cards */}
