@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The NUST NET Playbook (NET-2027 Edition) — Landing Page
 
-## Getting Started
+A mobile-first, high-conversion landing page for **The NUST NET Playbook (NET-2027 Edition)**, engineered for students aiming for Engineering and Computing programmes at NUST (National University of Sciences and Technology).
 
-First, run the development server:
+Designed with high priority for mobile visitors coming from Reddit's in-app browser (~375px viewport), ensuring zero horizontal overflow, instant page loads, and accessible interactive FAQ accordions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ⚡ Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router, Turbopack, React 19)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Checkout / Payment Gateway:** [Tally Form](https://tally.so/r/4aKLGO) (Easypaisa, JazzCash, NayaPay, SadaPay)
+- **Deployment Platform:** [Vercel](https://vercel.com/) (Zero-configuration automated CI/CD)
+
+---
+
+## 📁 Project Structure
+
+```text
+├── app/
+│   ├── globals.css         # Global styles, overflow defense, and typography
+│   ├── layout.tsx          # Root layout with metadata & OpenGraph tags
+│   └── page.tsx            # Main landing page covering all 7 sections
+├── components/
+│   └── FaqAccordion.tsx    # Accessible, collapsible FAQ accordion
+├── images/                 # Sample preview pages
+│   ├── sample-1.png        # The Chapter Preparation Loop
+│   ├── sample-2.png        # The 3-Round Math Strategy
+│   └── sample-3.png        # FLP Diagnosis & Tracking Matrix
+├── public/
+│   └── images/             # Publicly served sample preview assets
+├── next.config.ts          # Next.js configuration
+├── package.json            # Scripts & project dependencies
+└── tsconfig.json           # TypeScript configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Local Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Learn More
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Open in browser:**
+   Open [http://localhost:3000](http://localhost:3000) to view the page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Production Build:**
+   ```bash
+   npm run build
+   npm run start
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🌐 Deploying to Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Log into your [Vercel Dashboard](https://vercel.com).
+2. Click **Add New Project** and import the repository: `MYahya-ee/NET-landing-page`.
+3. Vercel automatically detects Next.js. Click **Deploy**.
+4. Your site will be live on a production `.vercel.app` URL immediately.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📄 License & Disclaimer
+
+*Independent student guide. Not an official NUST publication.*
+© 2027 The NUST NET Playbook. All rights reserved.
