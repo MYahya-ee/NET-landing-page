@@ -7,7 +7,6 @@ import {
   Check,
   X,
   FileSpreadsheet,
-  Zap,
 } from "lucide-react";
 
 const TALLY_URL = "https://tally.so/r/4aKLGO";
@@ -95,7 +94,7 @@ export default function Home() {
               variant="secondary"
               className="w-full sm:w-auto text-base"
             >
-              Explore Contents
+              See what&apos;s inside
             </Button>
           </div>
 
@@ -113,7 +112,7 @@ export default function Home() {
             <div className="card-hard-sm -rotate-2 w-28 sm:w-40 aspect-[1/1.414] overflow-hidden hover:rotate-0 transition-transform duration-300 bg-white">
               <Image
                 src="/images/sample-2.png"
-                alt="Chapter 1 Preview"
+                alt="Preview of Chapter 1: Know the Test Before You Prepare"
                 width={160}
                 height={226}
                 className="w-full h-full object-contain"
@@ -122,7 +121,7 @@ export default function Home() {
             <div className="card-hard-sm rotate-1 w-32 sm:w-44 aspect-[1/1.414] overflow-hidden z-10 hover:rotate-0 transition-transform duration-300 bg-white">
               <Image
                 src="/images/sample-1.png"
-                alt="The NUST NET Playbook Cover"
+                alt="Cover of The NUST NET Playbook"
                 width={176}
                 height={249}
                 className="w-full h-full object-contain"
@@ -131,7 +130,7 @@ export default function Home() {
             <div className="card-hard-sm -rotate-1 w-28 sm:w-40 aspect-[1/1.414] overflow-hidden hover:rotate-0 transition-transform duration-300 bg-white">
               <Image
                 src="/images/sample-3.png"
-                alt="Chapter 3 Preview"
+                alt="Preview of Chapter 3: The Chapter Loop"
                 width={160}
                 height={226}
                 className="w-full h-full object-contain"
@@ -153,11 +152,10 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-center sm:text-left mb-8">
             <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              PROVEN ITERATION
+              MY RESULTS
             </span>
             <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
-              AN ATLAS, <span className="text-[#C4432B]">SCORED IN</span>{" "}
-              3 ATTEMPTS.
+              My score in 3 attempts
             </h2>
           </div>
 
@@ -167,7 +165,7 @@ export default function Home() {
               <div className="flex items-center justify-between">
                 <span className="stamp text-[#6b6459] text-[10px]">ATTEMPT 01</span>
                 <span className="text-xs text-[#6b6459] font-normal">
-                  Initial Baseline
+                  Starting point
                 </span>
               </div>
               <div className="font-pixel text-3xl sm:text-4xl text-[#161310]">
@@ -197,10 +195,10 @@ export default function Home() {
               </p>
             </div>
 
-            {/* NET-4 — Top Score */}
+            {/* NET-4 — Best Score */}
             <div className="card-hard p-5 space-y-3 relative">
-              <div className="absolute -top-3 -right-2 bg-[#C4432B] text-[#FFFAEF] text-[10px] font-bold uppercase px-3 py-1 rounded border-2 border-[#161310] shadow-[2px_2px_0px_#161310] rotate-2">
-                ★ TOP SCORE
+              <div className="absolute -top-3 -right-2 bg-[#C4432B] text-[#FFFAEF] text-[10px] font-bold uppercase px-3 py-1 border-2 border-[#161310] shadow-[2px_2px_0px_#161310] rotate-2">
+                ★ BEST SCORE
               </div>
               <div className="flex items-center justify-between">
                 <span className="stamp text-[#2E5DD6] text-[10px]">ATTEMPT 03</span>
@@ -214,8 +212,7 @@ export default function Home() {
               </div>
               <hr className="divider-tear" />
               <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
-                Simulated 3-hour FLPs, reviewed every MCQ, and used a 3-round
-                Math strategy.
+                I practiced full 3-hour papers, checked every MCQ afterward, and used a 3-round method for Math.
               </p>
             </div>
           </div>
@@ -232,15 +229,14 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-center sm:text-left mb-8">
             <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              CURRICULUM &amp; BREAKDOWN
+              WHAT YOU GET
             </span>
             <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
               WHAT&apos;S INSIDE{" "}
               <span className="text-[#C4432B]">THE PLAYBOOK.</span>
             </h2>
             <p className="mt-2 text-sm sm:text-base text-[#6b6459] font-normal max-w-xl">
-              A comprehensive blueprint distilled into 5 core parts plus an
-              analysis toolkit.
+              5 short parts, plus a toolkit to track your mistakes.
             </p>
           </div>
 
@@ -248,7 +244,7 @@ export default function Home() {
             {[
               {
                 num: "01",
-                title: "Part I: Get Clear Before You Prepare",
+                title: "Part I: Know the Exam First",
                 desc: "Test pattern, eligibility rules, and subject weightings (50% Math, 30% Physics, 20% English).",
               },
               {
@@ -292,19 +288,18 @@ export default function Home() {
 
             {/* Bonus */}
             <div className="card-hard p-4 sm:p-5 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start relative">
-              <div className="absolute -top-2.5 left-4 bg-[#2D6A4F] text-[#FFFAEF] text-[10px] font-bold uppercase px-2.5 py-0.5 rounded border border-[#161310] shadow-[2px_2px_0px_#161310]">
+              <div className="absolute -top-2.5 left-4 bg-[#2D6A4F] text-[#FFFAEF] text-[10px] font-bold uppercase px-2.5 py-0.5 border border-[#161310] shadow-[2px_2px_0px_#161310]">
                 BONUS INCLUDED
               </div>
-              <span className="shrink-0 w-8 h-8 rounded bg-[#2D6A4F]/10 text-[#2D6A4F] flex items-center justify-center mt-1">
+              <span className="shrink-0 w-8 h-8 bg-[#2D6A4F]/10 text-[#2D6A4F] flex items-center justify-center mt-1">
                 <FileSpreadsheet className="w-4 h-4" />
               </span>
               <div className="space-y-1">
                 <h3 className="text-base sm:text-lg font-medium text-[#161310]">
-                  Companion FLP Performance &amp; Analysis Toolkit
+                  Practice Paper Toolkit
                 </h3>
                 <p className="text-sm text-[#6b6459] font-normal leading-relaxed">
-                  4 structured analysis &amp; tracking sheets to diagnose
-                  chapter-level mistakes.
+                  4 simple sheets to track your practice papers and find which chapters are costing you marks.
                 </p>
               </div>
             </div>
@@ -319,14 +314,13 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-center sm:text-left mb-8">
             <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              PREVIEW MATERIAL
+              SNEAK PEEK
             </span>
             <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
-              INSIDE{" "}
-              <span className="text-[#C4432B]">THE PLAYBOOK.</span>
+              A look inside
             </h2>
             <p className="mt-2 text-sm sm:text-base text-[#6b6459] font-normal max-w-xl">
-              Real previews and templates from inside the guide.
+              Real pages from the guide.
             </p>
           </div>
 
@@ -334,24 +328,24 @@ export default function Home() {
             {[
               {
                 src: "/images/sample-2.png",
-                alt: "Sample 2 - Chapter 1: Know the Test Before You Prepare",
+                alt: "Preview of Chapter 1: Know the Test Before You Prepare",
                 label: "PART I / CH.1",
                 title: "Know the Test Before You Prepare",
-                desc: "Stream eligibility, test patterns, and subject weightings before buying more coaching books.",
+                desc: "Learn who can apply, how the test is set up, and how marks are split, before you spend money on more books.",
               },
               {
                 src: "/images/sample-1.png",
-                alt: "Sample 1 - The NUST NET Playbook Cover",
+                alt: "Cover of The NUST NET Playbook",
                 label: "COVER",
                 title: "107 to 150: The NET Playbook",
-                desc: "NET-2027 Edition cover — the exact independent preparation blueprint for Engineering & Computing.",
+                desc: "The NET-2027 edition, made for Engineering & Computing.",
               },
               {
                 src: "/images/sample-3.png",
-                alt: "Sample 3 - Chapter 3: Repeatable Chapter Loop",
+                alt: "Preview of Chapter 3: The Chapter Loop",
                 label: "PART II / CH.3",
                 title: "The Repeatable Chapter Loop",
-                desc: "Building a study rhythm and chapter preparation loop you can consistently execute and repeat.",
+                desc: "A simple routine you repeat for every chapter, which you can consistently execute and repeat",
               },
             ].map((sample, i) => (
               <div key={i} className="card-hard overflow-hidden flex flex-col">
@@ -390,11 +384,10 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-center sm:text-left mb-8">
             <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              FIT &amp; EXPECTATIONS
+              IS THIS FOR YOU?
             </span>
             <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
-              THREE VOICES,{" "}
-              <span className="text-[#C4432B]">NEVER BLENDED.</span>
+              Check before you buy
             </h2>
           </div>
 
@@ -402,33 +395,30 @@ export default function Home() {
             {/* Built For */}
             <div className="card-hard p-5 sm:p-6 space-y-4">
               <div className="flex items-center gap-2">
-                <span className="w-6 h-6 rounded bg-[#2D6A4F]/10 text-[#2D6A4F] flex items-center justify-center shrink-0">
+                <span className="w-6 h-6 bg-[#2D6A4F]/10 text-[#2D6A4F] flex items-center justify-center shrink-0">
                   <Check className="w-4 h-4 stroke-[2]" />
                 </span>
                 <h3 className="font-pixel text-lg text-[#161310]">
-                  Built For
+                  This is for you if:
                 </h3>
               </div>
               <ul className="space-y-3 text-sm sm:text-base text-[#6b6459] font-normal leading-relaxed">
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#2D6A4F] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    First-time and repeat NET-Engineering / Computing aspirants
-                    who want a clear, repeatable preparation system.
+                    You&apos;re preparing for NET Engineering or Computing (first attempt or retake) and want a clear plan.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#2D6A4F] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    Students feeling overwhelmed by multiple coaching books and
-                    seeking a streamlined resource priority.
+                    You feel lost because there are too many books and you don&apos;t know which ones matter.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#2D6A4F] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    Aspirants scoring between 100 and 135 who need timed testing
-                    discipline to break past the 145+ barrier.
+                    You&apos;re scoring between 100 and 135 and want to reach 145+ by practicing under time pressure.
                   </span>
                 </li>
               </ul>
@@ -437,10 +427,12 @@ export default function Home() {
             {/* Not For */}
             <div className="card-hard p-5 sm:p-6 space-y-4">
               <div className="flex items-center gap-2">
-                <span className="w-6 h-6 rounded bg-[#6b6459]/10 text-[#6b6459] flex items-center justify-center shrink-0">
+                <span className="w-6 h-6 bg-[#6b6459]/10 text-[#6b6459] flex items-center justify-center shrink-0">
                   <X className="w-4 h-4 stroke-[2]" />
                 </span>
-                <h3 className="font-pixel text-lg text-[#161310]">Not For</h3>
+                <h3 className="font-pixel text-lg text-[#161310]">
+                  This is NOT for you if:
+                </h3>
               </div>
               <ul className="space-y-3 text-sm sm:text-base text-[#6b6459] font-normal leading-relaxed">
                 <li className="flex items-start gap-2.5">
@@ -460,8 +452,7 @@ export default function Home() {
                 <li className="flex items-start gap-2.5">
                   <X className="w-4 h-4 text-[#6b6459] shrink-0 mt-1 stroke-[2]" />
                   <span>
-                    Anyone searching for a magic &quot;guaranteed score&quot;
-                    shortcut without doing the actual timed chapter practice.
+                    You want a shortcut or a guaranteed score. This only works if you do the practice.
                   </span>
                 </li>
               </ul>
@@ -477,13 +468,13 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-center sm:text-left mb-8">
             <span className="stamp text-[#6b6459] mb-3 inline-flex">
-              FIELD LOG
+              FAQ
             </span>
             <h2 className="font-pixel text-2xl sm:text-4xl text-[#161310] leading-tight mt-3">
-              FREQUENTLY <span className="text-[#C4432B]">ASKED.</span>
+              Common questions
             </h2>
             <p className="mt-2 text-sm sm:text-base text-[#6b6459] font-normal max-w-xl">
-              Everything you need to know about payment, delivery, and format.
+              Quick answers about payment, delivery, and format.
             </p>
           </div>
 
@@ -496,18 +487,12 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <section className="w-full bg-[#161310] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 text-center space-y-6">
-          <span className="stamp text-[#2D6A4F] border-[#2D6A4F]/40 bg-[#2D6A4F]/10">
-            JOIN THE EXPEDITION
-          </span>
-
           <h2 className="font-pixel text-3xl sm:text-5xl text-[#FFFAEF] leading-tight">
-            READY TO{" "}
-            <span className="text-[#C4432B]">TAKE CONTROL?</span>
+            Ready to raise your NET score?
           </h2>
 
-          <p className="text-[#FFFAEF]/60 text-base sm:text-lg font-normal max-w-xl mx-auto leading-relaxed">
-            Get instant access to the exact routines, the 3-round math strategy,
-            and the companion FLP diagnostic sheets.
+          <p className="text-[#FFFAEF]/80 text-base sm:text-lg font-normal max-w-xl mx-auto leading-relaxed">
+            Get the full study plan, the 3-round Math method, and the practice paper tracking sheets.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
@@ -522,9 +507,8 @@ export default function Home() {
             </a>
           </div>
 
-          <p className="text-xs sm:text-sm text-[#FFFAEF]/40 font-normal">
-            Pay via Easypaisa, JazzCash, NayaPay, or SadaPay • Direct PDF &amp;
-            Sheets email delivery
+          <p className="text-xs sm:text-sm text-[#FFFAEF]/60 font-normal">
+            Pay with Easypaisa, JazzCash, NayaPay, or SadaPay • PDF and sheets sent to your email
           </p>
         </div>
       </section>
@@ -538,10 +522,10 @@ export default function Home() {
             NET◆PLAYBOOK
           </span>
         </div>
-        <p className="text-xs sm:text-sm text-[#FFFAEF]/30 font-normal">
-          Independent student guide. Not an official NUST publication.
+        <p className="text-xs sm:text-sm text-[#FFFAEF]/60 font-normal">
+          An independent guide by a NET student. Not an official NUST publication.
         </p>
-        <p className="text-[11px] text-[#FFFAEF]/20 font-normal">
+        <p className="text-[11px] text-[#FFFAEF]/40 font-normal">
           © 2027 The NUST NET Playbook. All rights reserved.
         </p>
       </footer>

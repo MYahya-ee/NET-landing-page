@@ -23,9 +23,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "107 to 150: The NUST NET Playbook (NET-2027 Edition)",
+  title: "NUST NET Playbook: How I Went From 107 to 150 (NET-2027)",
   description:
-    "An independent student guide sharing the exact preparation system, subject routines, and timed FLP review method used to jump from 107 to 150 in NUST NET Engineering & Computing.",
+    "A simple step-by-step NUST NET study plan for Engineering & Computing. The routine I used to go from 107 to 150.",
   keywords: [
     "NUST NET",
     "NET Engineering",
@@ -37,11 +37,16 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Independent NET Achiever" }],
   openGraph: {
-    title: "107 to 150: The NUST NET Playbook (NET-2027 Edition)",
+    title: "NUST NET Playbook: How I Went From 107 to 150 (NET-2027)",
     description:
-      "The exact preparation system, subject routines, and timed FLP review method to jump from 107 to 150 in NUST NET.",
+      "A simple step-by-step NUST NET study plan for Engineering & Computing. The routine I used to go from 107 to 150.",
     type: "website",
     locale: "en_PK",
+  },
+  twitter: {
+    title: "NUST NET Playbook: How I Went From 107 to 150 (NET-2027)",
+    description:
+      "A simple step-by-step NUST NET study plan for Engineering & Computing. The routine I used to go from 107 to 150.",
   },
 };
 

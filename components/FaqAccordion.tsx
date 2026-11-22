@@ -12,12 +12,12 @@ const faqs: FaqItem[] = [
   {
     question: "How do I pay?",
     answer:
-      'Click "Get the Playbook" to open the quick checkout form. Pay 650 PKR via Easypaisa, JazzCash, NayaPay, or SadaPay and upload your payment screenshot + TID.',
+      'Tap "Get the Playbook" to open the form. Send 650 PKR through Easypaisa, JazzCash, NayaPay, or SadaPay. Then upload your payment screenshot.',
   },
   {
-    question: "What format is it in and how fast do I get it?",
+    question: "What do I get, and how fast does it arrive?",
     answer:
-      "You receive the Playbook PDF and the Companion FLP Toolkit via email within 12–24 hours of payment verification.",
+      "You receive the Playbook PDF and the Companion FLP Toolkit via email within 4-6 hours of payment verification.",
   },
   {
     question: "Is this updated for NET-2027?",

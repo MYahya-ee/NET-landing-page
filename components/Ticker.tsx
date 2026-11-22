@@ -1,12 +1,11 @@
 export default function Ticker() {
   const items = [
-    "PRESS START",
     "BUILT FOR NET-2027",
-    "107 → 150 SYSTEM",
-    "TIMED FLP REVIEW",
-    "3-ROUND MATH STRATEGY",
+    "107 → 150",
+    "FULL-LENGTH PRACTICE PAPERS",
+    "3-ROUND MATH METHOD",
     "NO GUESSWORK",
-    "CHAPTER PREPARATION LOOPS",
+    "CHAPTER-BY-CHAPTER PLAN",
     "PDF + TOOLKIT",
   ];
 
