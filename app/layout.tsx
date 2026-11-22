@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
+const googleSansFlex = localFont({
+  src: "./fonts/GoogleSansFlex-Variable.ttf",
+  variable: "--font-google-sans-flex",
   display: "swap",
-  variable: "--font-inter",
 });
 
 export const viewport: Viewport = {
@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth antialiased`}>
-      <body className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
+    <html lang="en" className={`${googleSansFlex.variable} scroll-smooth antialiased`}>
+      <body className="min-h-screen bg-[#F7F3EC] text-[#1B1713] font-sans selection:bg-[#EFE9DF] selection:text-[#1B1713]">
         {children}
       </body>
     </html>

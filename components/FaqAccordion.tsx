@@ -45,23 +45,28 @@ export default function FaqAccordion() {
         return (
           <div
             key={index}
-            className="border border-slate-200 bg-white rounded-xl overflow-hidden transition-colors"
+            className="border border-[#DDD6CB] bg-[#EFE9DF]/50 hover:bg-[#EFE9DF]/80 rounded-xl overflow-hidden transition-all duration-200"
           >
             <button
               type="button"
               onClick={() => toggle(index)}
-              className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-medium text-slate-900 hover:text-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-medium text-[#1B1713] transition-colors focus:outline-none"
               aria-expanded={isOpen}
             >
-              <span className="text-base sm:text-lg pr-4">{faq.question}</span>
+              <span className="text-base sm:text-lg pr-4 font-medium flex items-center gap-2.5">
+                {isOpen && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1F4E3D] shrink-0" />
+                )}
+                <span>{faq.question}</span>
+              </span>
               <ChevronDown
-                className={`w-5 h-5 text-slate-500 shrink-0 transition-transform duration-200 ${
-                  isOpen ? "rotate-180 text-blue-600" : ""
+                className={`w-5 h-5 text-[#5C544B] shrink-0 transition-transform duration-200 ${
+                  isOpen ? "rotate-180 text-[#1F4E3D]" : ""
                 }`}
               />
             </button>
             {isOpen && (
-              <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-3">
+              <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-[#5C544B] text-sm sm:text-base leading-relaxed border-t border-[#DDD6CB]/60 pt-3">
                 {faq.answer}
               </div>
             )}
