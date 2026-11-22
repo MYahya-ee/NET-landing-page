@@ -43,6 +43,13 @@ export const metadata: Metadata = {
     "NUST aggregate",
   ],
   authors: [{ name: "Independent NET Achiever" }],
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "NUST NET Playbook: How I Went From 107 to 150 (NET-2027)",
     description:
