@@ -34,10 +34,10 @@ export default function Home() {
           <span className="font-pixel text-base sm:text-xl text-[#161310] tracking-tight flex items-center gap-1.5 sm:gap-2">
             <span>NET</span>
             <Image
-              src="/images/logo.png"
+              src="/images/nav-logo.png"
               alt="Logo"
-              width={22}
-              height={22}
+              width={20}
+              height={20}
               className="w-4 h-4 sm:w-5 sm:h-5 object-contain inline-block -mt-0.5"
               priority
             />
@@ -528,7 +528,7 @@ export default function Home() {
           <span className="font-pixel text-sm text-[#FFFAEF]/50 flex items-center gap-1.5">
             <span>NET</span>
             <Image
-              src="/images/logo.png"
+              src="/images/nav-logo.png"
               alt="Logo"
               width={16}
               height={16}
