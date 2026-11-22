@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { Pixelify_Sans } from "next/font/google";
+import { Jersey_15 } from "next/font/google";
 import "./globals.css";
 
 const googleSansFlex = localFont({
@@ -9,10 +9,10 @@ const googleSansFlex = localFont({
   display: "swap",
 });
 
-const pixelifySans = Pixelify_Sans({
+const jersey15 = Jersey_15({
+  weight: "400",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-pixelify",
+  variable: "--font-pixel",
   display: "swap",
 });
 
@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${googleSansFlex.variable} ${pixelifySans.variable} scroll-smooth antialiased`}
+      className={`${googleSansFlex.variable} ${jersey15.variable} scroll-smooth antialiased`}
     >
       <body className="min-h-screen bg-[#FFFAEF] text-[#161310] font-sans selection:bg-[#161310] selection:text-[#FFFAEF]">
         {children}

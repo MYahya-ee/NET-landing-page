@@ -10,7 +10,7 @@
 @theme {
   --font-sans: var(--font-google-sans-flex), "Google Sans Flex", system-ui,
     -apple-system, sans-serif;
-  --font-pixel: var(--font-pixelify), "Pixelify Sans", monospace;
+  --font-pixel: var(--font-pixel), "Jersey 15", monospace;
 }
 
 :root {
