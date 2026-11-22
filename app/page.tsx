@@ -110,31 +110,31 @@ export default function Home() {
 
           {/* Tilted preview cards */}
           <div className="flex justify-center gap-3 sm:gap-5 pt-4 sm:pt-6">
-            <div className="card-hard-sm -rotate-2 w-28 sm:w-40 aspect-[3/4] overflow-hidden hover:rotate-0 transition-transform duration-300">
+            <div className="card-hard-sm -rotate-2 w-28 sm:w-40 aspect-[1/1.414] overflow-hidden hover:rotate-0 transition-transform duration-300 bg-white">
               <Image
                 src="/images/sample-1.png"
-                alt="Chapter Preparation Loop preview"
+                alt="The NUST NET Playbook Cover"
                 width={160}
-                height={213}
-                className="w-full h-full object-cover"
+                height={226}
+                className="w-full h-full object-contain"
               />
             </div>
-            <div className="card-hard-sm rotate-1 w-32 sm:w-44 aspect-[3/4] overflow-hidden z-10 hover:rotate-0 transition-transform duration-300">
+            <div className="card-hard-sm rotate-1 w-32 sm:w-44 aspect-[1/1.414] overflow-hidden z-10 hover:rotate-0 transition-transform duration-300 bg-white">
               <Image
                 src="/images/sample-2.png"
-                alt="3-Round Math Strategy preview"
+                alt="Chapter 1 Preview"
                 width={176}
-                height={235}
-                className="w-full h-full object-cover"
+                height={249}
+                className="w-full h-full object-contain"
               />
             </div>
-            <div className="card-hard-sm -rotate-1 w-28 sm:w-40 aspect-[3/4] overflow-hidden hover:rotate-0 transition-transform duration-300">
+            <div className="card-hard-sm -rotate-1 w-28 sm:w-40 aspect-[1/1.414] overflow-hidden hover:rotate-0 transition-transform duration-300 bg-white">
               <Image
                 src="/images/sample-3.png"
-                alt="FLP Toolkit preview"
+                alt="Chapter 3 Preview"
                 width={160}
-                height={213}
-                className="w-full h-full object-cover"
+                height={226}
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -334,33 +334,33 @@ export default function Home() {
             {[
               {
                 src: "/images/sample-1.png",
-                alt: "Sample 1 - The Chapter Preparation Loop",
-                label: "SYS.01",
-                title: "The Chapter Preparation Loop",
-                desc: "Systematic process for mastering core textbook concepts before attempting practice MCQs.",
+                alt: "Sample 1 - The NUST NET Playbook Cover",
+                label: "COVER",
+                title: "107 to 150: The NET Playbook",
+                desc: "NET-2027 Edition cover — the exact independent preparation blueprint for Engineering & Computing.",
               },
               {
                 src: "/images/sample-2.png",
-                alt: "Sample 2 - The 3-Round Mathematics Strategy",
-                label: "SYS.02",
-                title: "The 3-Round Math Strategy",
-                desc: "Clock management framework to answer 80 Mathematics MCQs without running out of time.",
+                alt: "Sample 2 - Chapter 1: Know the Test Before You Prepare",
+                label: "PART I / CH.1",
+                title: "Know the Test Before You Prepare",
+                desc: "Stream eligibility, test patterns, and subject weightings before buying more coaching books.",
               },
               {
                 src: "/images/sample-3.png",
-                alt: "Sample 3 - FLP Performance & Error Matrix",
-                label: "TOOLKIT",
-                title: "FLP Diagnosis & Tracking Sheet",
-                desc: "Granular tracking matrix to pinpoint whether errors are conceptual or calculation-based.",
+                alt: "Sample 3 - Chapter 3: Repeatable Chapter Loop",
+                label: "PART II / CH.3",
+                title: "The Repeatable Chapter Loop",
+                desc: "Building a study rhythm and chapter preparation loop you can consistently execute and repeat.",
               },
             ].map((sample, i) => (
               <div key={i} className="card-hard overflow-hidden flex flex-col">
-                <div className="relative aspect-[3/4] w-full bg-[#F2EAD6] border-b-[1.5px] border-[#161310]">
+                <div className="relative aspect-[1/1.414] w-full bg-[#F2EAD6] border-b-[1.5px] border-[#161310]">
                   <Image
                     src={sample.src}
                     alt={sample.alt}
                     fill
-                    className="object-contain p-3"
+                    className="object-contain p-2"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
