@@ -36,15 +36,12 @@ export default function Home() {
             NET◆PLAYBOOK
           </span>
         </div>
-        <div className="flex items-center gap-2 sm:gap-3">
-          <span className="hidden sm:inline stamp text-[#2D6A4F]">
-            NET-2027
-          </span>
+        <div className="flex items-center">
           <Button
             href={TALLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            variant="primary"
+            variant="cobalt"
             className="text-sm py-2 px-4"
           >
             Get Playbook
@@ -57,26 +54,17 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <section className="w-full bg-[#FFFAEF] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 text-center space-y-6 sm:space-y-8">
-          {/* Badge — stamp */}
-          <div className="flex justify-center">
-            <span className="stamp text-[#2D6A4F] border-[#2D6A4F] bg-[#2D6A4F]/10">
-              <Zap className="w-3 h-3" />
-              NET-2027 EDITION • ENGINEERING &amp; COMPUTING
-            </span>
-          </div>
-
-          {/* Pixel heading — cobalt blue accent on key words */}
-          <h1 className="font-pixel text-4xl sm:text-6xl lg:text-7xl text-[#161310] leading-[1.1] tracking-tight">
+          {/* Pixel heading — cobalt blue accent on key words, bold for readability */}
+          <h1 className="font-pixel font-bold text-4xl sm:text-6xl lg:text-7xl text-[#161310] leading-[1.1] tracking-tight">
             107 TO 150.{" "}
             <span className="text-[#2E5DD6]">THE NUST NET</span>{" "}
             PLAYBOOK.
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-xl text-[#6B6459] font-normal max-w-2xl mx-auto leading-relaxed">
-            An independent student guide sharing the exact preparation system,
-            subject routines, and timed FLP review method used to jump from 107
-            to 150.
+          <p className="text-base sm:text-xl text-[#161310]/85 font-medium max-w-2xl mx-auto leading-relaxed">
+            A guide sharing the exact preparation system, subject routines, and
+            timed FLP review method used to jump from 107 to 150.
           </p>
 
           {/* CTA Buttons */}
@@ -527,7 +515,7 @@ export default function Home() {
               href={TALLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-brutal w-full sm:w-auto text-base py-3.5 px-7 rounded-lg border-2 border-[#FFFAEF]/20 bg-[#2E5DD6] text-white font-medium shadow-[4px_4px_0px_rgba(255,250,239,0.15)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_rgba(255,250,239,0.15)] transition-all"
+              className="btn-brutal w-full sm:w-auto text-base py-3.5 px-7 border-2 border-[#FFFAEF]/20 bg-[#2E5DD6] text-white font-medium shadow-[4px_4px_0px_rgba(255,250,239,0.15)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_rgba(255,250,239,0.15)] transition-all"
             >
               <span>Get the Playbook — 650 PKR</span>
               <svg className="w-4 h-4 shrink-0 btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m-7-7l7 7-7 7" /></svg>
@@ -577,7 +565,7 @@ export default function Home() {
           href={TALLY_URL}
           target="_blank"
           rel="noopener noreferrer"
-          variant="primary"
+          variant="cobalt"
           className="py-2.5 px-5 text-sm"
         >
           Get Playbook

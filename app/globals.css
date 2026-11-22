@@ -41,11 +41,11 @@ body {
   box-sizing: border-box;
 }
 
-/* ───── Hard Shadow Card System ───── */
+/* ───── Hard Shadow Card System (Sharp Corners) ───── */
 .card-hard {
   background: #fff;
   border: 1.5px solid var(--ink);
-  border-radius: 0.5rem;
+  border-radius: 0px;
   box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--ink);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -58,17 +58,17 @@ body {
 .card-hard-sm {
   background: #fff;
   border: 1.5px solid var(--ink);
-  border-radius: 0.375rem;
+  border-radius: 0px;
   box-shadow: 3px 3px 0px var(--ink);
 }
 
 .card-hard-flat {
   background: #fff;
   border: 1.5px solid var(--ink);
-  border-radius: 0.5rem;
+  border-radius: 0px;
 }
 
-/* ───── Brutalist Buttons ───── */
+/* ───── Brutalist Buttons (Sharp Corners) ───── */
 .btn-brutal {
   display: inline-flex;
   align-items: center;
@@ -77,7 +77,7 @@ body {
   padding: 0.75rem 1.5rem;
   font-weight: 500;
   font-size: 0.95rem;
-  border-radius: 0.5rem;
+  border-radius: 0px;
   border: 1.5px solid var(--ink);
   cursor: pointer;
   text-decoration: none;
@@ -129,7 +129,8 @@ body {
 .btn-brutal-cobalt {
   background: var(--cobalt);
   color: #fff;
-  border-color: var(--ink);
+  border: 1.5px solid var(--ink);
+  border-radius: 0px;
   box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--ink);
 }
 
@@ -137,6 +138,11 @@ body {
   background: var(--cobalt-muted);
   transform: translate(1px, 1px);
   box-shadow: 3px 3px 0px var(--ink);
+}
+
+.btn-brutal-cobalt:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px var(--ink);
 }
 
 /* ───── Ticker / Marquee Strip ───── */
@@ -177,5 +183,5 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   border: 1.5px solid currentColor;
-  border-radius: 0.25rem;
+  border-radius: 0px;
 }
