@@ -54,8 +54,8 @@ export default function Home() {
       ═══════════════════════════════════════════ */}
       <section className="w-full bg-[#FFFAEF] border-b-2 border-[#161310]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 text-center space-y-6 sm:space-y-8">
-          {/* Pixel heading — cobalt blue accent on key words, bold for readability */}
-          <h1 className="font-pixel-num font-bold text-4xl sm:text-6xl lg:text-7xl text-[#161310] leading-[1.1] tracking-tight">
+          {/* Pixel heading — cobalt blue accent on key words */}
+          <h1 className="font-pixel-num font-normal text-[2.75rem] sm:text-7xl lg:text-8xl text-[#161310] leading-[0.98] tracking-tight">
             107 TO 150.{" "}
             <span className="text-[#2E5DD6]">THE NUST NET</span>{" "}
             PLAYBOOK.
