@@ -15,10 +15,10 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-[#F7F3EC] text-[#1B1713] font-sans antialiased overflow-x-hidden selection:bg-[#EFE9DF] selection:text-[#1B1713]">
       {/* Top Banner Notice */}
-      <div className="w-full bg-[#EFE9DF] text-[#5C544B] text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-[#DDD6CB]">
+      <div className="w-full bg-[#EFE9DF] text-[#5C544B] text-xs sm:text-sm py-2 px-4 text-center font-normal border-b border-[#DDD6CB]">
         <span>
           Instant Email Delivery • Verified for{" "}
-          <strong className="text-[#1B1713] font-semibold">NET-2027</strong>{" "}
+          <strong className="text-[#1B1713] font-medium">NET-2027</strong>{" "}
           Academic Cycle
         </span>
       </div>
@@ -27,16 +27,16 @@ export default function Home() {
         {/* 1. HERO SECTION */}
         <section className="text-center space-y-5 sm:space-y-6 pt-2 sm:pt-4">
           {/* Accent rule: tiny high-signal detail (#1F4E3D) */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide bg-[#1F4E3D]/10 text-[#1F4E3D] border border-[#1F4E3D]/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium tracking-wide bg-[#1F4E3D]/10 text-[#1F4E3D] border border-[#1F4E3D]/20">
             <Sparkles className="w-3.5 h-3.5 text-[#1F4E3D] shrink-0" />
             <span>NET-2027 EDITION • ENGINEERING &amp; COMPUTING</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1B1713] leading-tight sm:leading-[1.15]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-[-0.03em] text-[#1B1713] leading-[1.12]">
             107 to 150: The NUST NET Playbook
           </h1>
 
-          <p className="text-base sm:text-lg text-[#5C544B] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-[#5C544B] font-normal max-w-2xl mx-auto leading-relaxed">
             An independent student guide sharing the exact preparation system,
             subject routines, and timed FLP review method used to jump from 107
             to 150.
@@ -53,7 +53,7 @@ export default function Home() {
               Get the Playbook — 650 PKR
             </Button>
 
-            <p className="mt-3.5 text-xs sm:text-sm text-[#5C544B] flex items-center justify-center gap-1.5 text-center">
+            <p className="mt-3.5 text-xs sm:text-sm text-[#5C544B] font-normal flex items-center justify-center gap-1.5 text-center">
               <ShieldCheck className="w-4 h-4 text-[#1F4E3D] shrink-0" />
               <span>
                 PDF + Companion FLP Toolkit • Delivered via email after quick
@@ -66,12 +66,12 @@ export default function Home() {
         {/* 2. SCORE PROGRESSION STRIP */}
         <section aria-labelledby="progression-heading" className="space-y-4">
           <div className="text-center sm:text-left">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#1F4E3D]">
+            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
               Proven Iteration
             </span>
             <h2
               id="progression-heading"
-              className="text-xl sm:text-2xl font-bold text-[#1B1713]"
+              className="text-xl sm:text-2xl font-normal tracking-[-0.02em] text-[#1B1713]"
             >
               The Score Progression
             </h2>
@@ -82,16 +82,16 @@ export default function Home() {
             <div className="p-5 rounded-2xl bg-[#EFE9DF]/50 border border-[#DDD6CB] shadow-sm flex flex-col justify-between">
               <div>
                 <div className="flex items-baseline justify-between mb-2">
-                  <span className="text-[11px] font-semibold uppercase px-2 py-0.5 rounded bg-[#E5DFD4] text-[#5C544B]">
+                  <span className="text-[11px] font-medium uppercase px-2 py-0.5 rounded bg-[#E5DFD4] text-[#5C544B]">
                     Attempt 1
                   </span>
-                  <span className="text-xs text-[#5C544B]">Initial Baseline</span>
+                  <span className="text-xs text-[#5C544B] font-normal">Initial Baseline</span>
                 </div>
-                <div className="text-2xl font-bold text-[#1B1713] tracking-tight">
+                <div className="text-2xl font-medium text-[#1B1713] tracking-tight">
                   NET-2: <span>107</span>
                   <span className="text-[#5C544B] text-lg font-normal">/200</span>
                 </div>
-                <p className="mt-2.5 text-sm text-[#5C544B] leading-relaxed">
+                <p className="mt-2.5 text-sm text-[#5C544B] font-normal leading-relaxed">
                   Studied like a board exam; struggled under timed MCQ pressure.
                 </p>
               </div>
@@ -101,38 +101,38 @@ export default function Home() {
             <div className="p-5 rounded-2xl bg-[#EFE9DF]/50 border border-[#DDD6CB] shadow-sm flex flex-col justify-between">
               <div>
                 <div className="flex items-baseline justify-between mb-2">
-                  <span className="text-[11px] font-semibold uppercase px-2 py-0.5 rounded bg-[#E5DFD4] text-[#5C544B]">
+                  <span className="text-[11px] font-medium uppercase px-2 py-0.5 rounded bg-[#E5DFD4] text-[#5C544B]">
                     Attempt 2
                   </span>
                   <span className="text-xs font-medium text-[#1B1713]">+34 Points</span>
                 </div>
-                <div className="text-2xl font-bold text-[#1B1713] tracking-tight">
+                <div className="text-2xl font-medium text-[#1B1713] tracking-tight">
                   NET-3: <span>141</span>
                   <span className="text-[#5C544B] text-lg font-normal">/200</span>
                 </div>
-                <p className="mt-2.5 text-sm text-[#5C544B] leading-relaxed">
+                <p className="mt-2.5 text-sm text-[#5C544B] font-normal leading-relaxed">
                   Fixed Physics using a PTB-first method and targeted chapter loops.
                 </p>
               </div>
             </div>
 
-            {/* Card 3: NET-4 (Highlighted top score with subtle accent) */}
+            {/* Card 3: NET-4 */}
             <div className="p-5 rounded-2xl bg-[#EFE9DF]/80 border-2 border-[#1F4E3D]/40 shadow-sm flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-[#1F4E3D] text-[#F7F3EC] text-[10px] font-bold uppercase px-3 py-0.5 rounded-bl-lg tracking-wider">
+              <div className="absolute top-0 right-0 bg-[#1F4E3D] text-[#F7F3EC] text-[10px] font-medium uppercase px-3 py-0.5 rounded-bl-lg tracking-wider">
                 Top Score
               </div>
               <div>
                 <div className="flex items-baseline justify-between mb-2">
-                  <span className="text-[11px] font-semibold uppercase px-2 py-0.5 rounded bg-[#1F4E3D]/10 text-[#1F4E3D]">
+                  <span className="text-[11px] font-medium uppercase px-2 py-0.5 rounded bg-[#1F4E3D]/10 text-[#1F4E3D]">
                     Attempt 3
                   </span>
-                  <span className="text-xs font-bold text-[#1F4E3D]">+9 Points</span>
+                  <span className="text-xs font-medium text-[#1F4E3D]">+9 Points</span>
                 </div>
-                <div className="text-2xl font-bold text-[#1B1713] tracking-tight">
+                <div className="text-2xl font-medium text-[#1B1713] tracking-tight">
                   NET-4: <span className="text-[#1F4E3D]">150</span>
                   <span className="text-[#5C544B] text-lg font-normal">/200</span>
                 </div>
-                <p className="mt-2.5 text-sm text-[#5C544B] leading-relaxed">
+                <p className="mt-2.5 text-sm text-[#5C544B] font-normal leading-relaxed">
                   Simulated 3-hour FLPs, reviewed every MCQ, and used a 3-round Math strategy.
                 </p>
               </div>
@@ -143,16 +143,16 @@ export default function Home() {
         {/* 3. WHAT'S INSIDE (TABLE OF CONTENTS) */}
         <section aria-labelledby="toc-heading" className="space-y-6">
           <div className="text-center sm:text-left">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#1F4E3D]">
+            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
               Curriculum &amp; Breakdown
             </span>
             <h2
               id="toc-heading"
-              className="text-2xl sm:text-3xl font-bold text-[#1B1713]"
+              className="text-2xl sm:text-3xl font-normal tracking-[-0.02em] text-[#1B1713]"
             >
               What&apos;s Inside the Playbook
             </h2>
-            <p className="mt-1 text-sm sm:text-base text-[#5C544B]">
+            <p className="mt-1 text-sm sm:text-base text-[#5C544B] font-normal">
               A comprehensive blueprint distilled into 5 core parts plus an analysis toolkit.
             </p>
           </div>
@@ -160,14 +160,14 @@ export default function Home() {
           <div className="space-y-3">
             {/* Part I */}
             <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-bold text-xs shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
                 01
               </div>
               <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-bold text-[#1B1713]">
+                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
                   Part I: Get Clear Before You Prepare
                 </h3>
-                <p className="text-sm text-[#5C544B] leading-relaxed">
+                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
                   Test pattern, eligibility rules, and subject weightings (50% Math, 30% Physics, 20% English).
                 </p>
               </div>
@@ -175,14 +175,14 @@ export default function Home() {
 
             {/* Part II */}
             <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-bold text-xs shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
                 02
               </div>
               <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-bold text-[#1B1713]">
+                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
                   Part II: Build a System You Can Repeat
                 </h3>
-                <p className="text-sm text-[#5C544B] leading-relaxed">
+                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
                   Baseline check, sticking to core resources, and the repeatable Chapter Preparation Loop.
                 </p>
               </div>
@@ -190,14 +190,14 @@ export default function Home() {
 
             {/* Part III */}
             <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-bold text-xs shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
                 03
               </div>
               <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-bold text-[#1B1713]">
+                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
                   Part III: Prepare by Subject
                 </h3>
-                <p className="text-sm text-[#5C544B] leading-relaxed">
+                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
                   Mathematics (lectures, notes, KIPS FUNG), Physics (PTB textbook-first + highlighting), and English.
                 </p>
               </div>
@@ -205,14 +205,14 @@ export default function Home() {
 
             {/* Part IV */}
             <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-bold text-xs shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
                 04
               </div>
               <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-bold text-[#1B1713]">
+                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
                   Part IV: Turn Practice into Performance
                 </h3>
-                <p className="text-sm text-[#5C544B] leading-relaxed">
+                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
                   Full-length practice paper review, the 3-round Mathematics time-management strategy, and final-days checklist.
                 </p>
               </div>
@@ -220,14 +220,14 @@ export default function Home() {
 
             {/* Part V */}
             <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/50 border border-[#DDD6CB] flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-bold text-xs shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#E5DFD4] text-[#1B1713] flex items-center justify-center font-medium text-xs shrink-0">
                 05
               </div>
               <div className="space-y-1">
-                <h3 className="text-base sm:text-lg font-bold text-[#1B1713]">
+                <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
                   Part V: Behind the Scores
                 </h3>
-                <p className="text-sm text-[#5C544B] leading-relaxed">
+                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
                   Full 107 → 141 → 150 breakdown and what I would do differently.
                 </p>
               </div>
@@ -235,19 +235,19 @@ export default function Home() {
 
             {/* Included Bonus */}
             <div className="p-4 sm:p-5 rounded-xl bg-[#EFE9DF]/80 border-2 border-[#1F4E3D]/30 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-              <div className="w-8 h-8 rounded-lg bg-[#1F4E3D]/10 text-[#1F4E3D] flex items-center justify-center font-bold text-xs shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#1F4E3D]/10 text-[#1F4E3D] flex items-center justify-center font-medium text-xs shrink-0">
                 <FileSpreadsheet className="w-4 h-4" />
               </div>
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-base sm:text-lg font-bold text-[#1B1713]">
+                  <h3 className="text-base sm:text-lg font-medium text-[#1B1713]">
                     Included Bonus: Companion FLP Performance &amp; Analysis Toolkit
                   </h3>
-                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-[#1F4E3D]/10 text-[#1F4E3D] tracking-wider">
+                  <span className="text-[10px] font-medium uppercase px-2 py-0.5 rounded bg-[#1F4E3D]/10 text-[#1F4E3D] tracking-wider">
                     Bonus
                   </span>
                 </div>
-                <p className="text-sm text-[#5C544B] leading-relaxed">
+                <p className="text-sm text-[#5C544B] font-normal leading-relaxed">
                   4 structured analysis &amp; tracking sheets to diagnose chapter-level mistakes.
                 </p>
               </div>
@@ -258,16 +258,16 @@ export default function Home() {
         {/* 4. INSIDE THE PLAYBOOK (SAMPLE PAGES) */}
         <section aria-labelledby="samples-heading" className="space-y-6">
           <div className="text-center sm:text-left">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#1F4E3D]">
+            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
               Preview Material
             </span>
             <h2
               id="samples-heading"
-              className="text-2xl sm:text-3xl font-bold text-[#1B1713]"
+              className="text-2xl sm:text-3xl font-normal tracking-[-0.02em] text-[#1B1713]"
             >
               Inside the Playbook (Sample Pages)
             </h2>
-            <p className="mt-1 text-sm sm:text-base text-[#5C544B]">
+            <p className="mt-1 text-sm sm:text-base text-[#5C544B] font-normal">
               Real previews and templates from inside the guide.
             </p>
           </div>
@@ -286,13 +286,13 @@ export default function Home() {
               </div>
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#1F4E3D]">
+                  <span className="text-[10px] font-medium uppercase tracking-wider text-[#1F4E3D]">
                     Sample 1
                   </span>
-                  <h3 className="text-sm font-bold text-[#1B1713] mt-0.5">
+                  <h3 className="text-sm font-medium text-[#1B1713] mt-0.5">
                     The Chapter Preparation Loop
                   </h3>
-                  <p className="text-xs text-[#5C544B] mt-1 leading-relaxed">
+                  <p className="text-xs text-[#5C544B] font-normal mt-1 leading-relaxed">
                     Systematic process for mastering core textbook concepts before attempting practice MCQs.
                   </p>
                 </div>
@@ -312,13 +312,13 @@ export default function Home() {
               </div>
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#1F4E3D]">
+                  <span className="text-[10px] font-medium uppercase tracking-wider text-[#1F4E3D]">
                     Sample 2
                   </span>
-                  <h3 className="text-sm font-bold text-[#1B1713] mt-0.5">
+                  <h3 className="text-sm font-medium text-[#1B1713] mt-0.5">
                     The 3-Round Math Strategy
                   </h3>
-                  <p className="text-xs text-[#5C544B] mt-1 leading-relaxed">
+                  <p className="text-xs text-[#5C544B] font-normal mt-1 leading-relaxed">
                     Clock management framework to answer 80 Mathematics MCQs without running out of time.
                   </p>
                 </div>
@@ -338,13 +338,13 @@ export default function Home() {
               </div>
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#1F4E3D]">
+                  <span className="text-[10px] font-medium uppercase tracking-wider text-[#1F4E3D]">
                     Sample 3 • Toolkit
                   </span>
-                  <h3 className="text-sm font-bold text-[#1B1713] mt-0.5">
+                  <h3 className="text-sm font-medium text-[#1B1713] mt-0.5">
                     FLP Diagnosis &amp; Tracking Sheet
                   </h3>
-                  <p className="text-xs text-[#5C544B] mt-1 leading-relaxed">
+                  <p className="text-xs text-[#5C544B] font-normal mt-1 leading-relaxed">
                     Granular tracking matrix to pinpoint whether errors are conceptual or calculation-based.
                   </p>
                 </div>
@@ -356,12 +356,12 @@ export default function Home() {
         {/* 5. WHO IT'S FOR / NOT FOR */}
         <section aria-labelledby="target-heading" className="space-y-6">
           <div className="text-center sm:text-left">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#1F4E3D]">
+            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
               Fit &amp; Expectations
             </span>
             <h2
               id="target-heading"
-              className="text-2xl sm:text-3xl font-bold text-[#1B1713]"
+              className="text-2xl sm:text-3xl font-normal tracking-[-0.02em] text-[#1B1713]"
             >
               Who It&apos;s For / Not For
             </h2>
@@ -372,25 +372,25 @@ export default function Home() {
             <div className="p-5 sm:p-6 rounded-2xl bg-[#EFE9DF]/60 border border-[#DDD6CB] space-y-4">
               <div className="flex items-center gap-2 text-[#1B1713]">
                 <span className="w-5 h-5 rounded-full bg-[#1F4E3D]/10 text-[#1F4E3D] flex items-center justify-center shrink-0">
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                  <Check className="w-3.5 h-3.5 stroke-[2]" />
                 </span>
-                <h3 className="text-lg font-bold">Built For</h3>
+                <h3 className="text-lg font-medium">Built For</h3>
               </div>
-              <ul className="space-y-2.5 text-sm sm:text-base text-[#5C544B] leading-relaxed">
+              <ul className="space-y-2.5 text-sm sm:text-base text-[#5C544B] font-normal leading-relaxed">
                 <li className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#1F4E3D] shrink-0 mt-1 stroke-[2.5]" />
+                  <Check className="w-4 h-4 text-[#1F4E3D] shrink-0 mt-1 stroke-[2]" />
                   <span>
                     First-time and repeat NET-Engineering / Computing aspirants who want a clear, repeatable preparation system.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#1F4E3D] shrink-0 mt-1 stroke-[2.5]" />
+                  <Check className="w-4 h-4 text-[#1F4E3D] shrink-0 mt-1 stroke-[2]" />
                   <span>
                     Students feeling overwhelmed by multiple coaching books and seeking a streamlined resource priority.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <Check className="w-4 h-4 text-[#1F4E3D] shrink-0 mt-1 stroke-[2.5]" />
+                  <Check className="w-4 h-4 text-[#1F4E3D] shrink-0 mt-1 stroke-[2]" />
                   <span>
                     Aspirants scoring between 100 and 135 who need timed testing discipline to break past the 145+ barrier.
                   </span>
@@ -402,25 +402,25 @@ export default function Home() {
             <div className="p-5 sm:p-6 rounded-2xl bg-[#EFE9DF]/40 border border-[#DDD6CB] space-y-4">
               <div className="flex items-center gap-2 text-[#1B1713]">
                 <span className="w-5 h-5 rounded-full bg-[#5C544B]/10 text-[#5C544B] flex items-center justify-center shrink-0">
-                  <X className="w-3.5 h-3.5 stroke-[2.5]" />
+                  <X className="w-3.5 h-3.5 stroke-[2]" />
                 </span>
-                <h3 className="text-lg font-bold">Not For</h3>
+                <h3 className="text-lg font-medium">Not For</h3>
               </div>
-              <ul className="space-y-2.5 text-sm sm:text-base text-[#5C544B] leading-relaxed">
+              <ul className="space-y-2.5 text-sm sm:text-base text-[#5C544B] font-normal leading-relaxed">
                 <li className="flex items-start gap-2.5">
-                  <X className="w-4 h-4 text-[#5C544B] shrink-0 mt-1 stroke-[2.5]" />
+                  <X className="w-4 h-4 text-[#5C544B] shrink-0 mt-1 stroke-[2]" />
                   <span>
                     NET-Business / Architecture students (this playbook is strictly engineered for Engineering &amp; Computing).
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <X className="w-4 h-4 text-[#5C544B] shrink-0 mt-1 stroke-[2.5]" />
+                  <X className="w-4 h-4 text-[#5C544B] shrink-0 mt-1 stroke-[2]" />
                   <span>
                     Anyone looking for a textbook replacement; you still need your PTB textbooks and practice papers.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <X className="w-4 h-4 text-[#5C544B] shrink-0 mt-1 stroke-[2.5]" />
+                  <X className="w-4 h-4 text-[#5C544B] shrink-0 mt-1 stroke-[2]" />
                   <span>
                     Anyone searching for a magic &quot;guaranteed score&quot; shortcut without doing the actual timed chapter practice.
                   </span>
@@ -433,16 +433,16 @@ export default function Home() {
         {/* 6. FAQ SECTION (COLLAPSIBLE ACCORDION) */}
         <section aria-labelledby="faq-heading" className="space-y-6">
           <div className="text-center sm:text-left">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#1F4E3D]">
+            <span className="text-xs font-medium uppercase tracking-wider text-[#1F4E3D]">
               Clear Answers
             </span>
             <h2
               id="faq-heading"
-              className="text-2xl sm:text-3xl font-bold text-[#1B1713]"
+              className="text-2xl sm:text-3xl font-normal tracking-[-0.02em] text-[#1B1713]"
             >
               Frequently Asked Questions
             </h2>
-            <p className="mt-1 text-sm sm:text-base text-[#5C544B]">
+            <p className="mt-1 text-sm sm:text-base text-[#5C544B] font-normal">
               Everything you need to know about payment, delivery, and format.
             </p>
           </div>
@@ -452,15 +452,15 @@ export default function Home() {
 
         {/* 7. FINAL CTA */}
         <section className="bg-[#EFE9DF] border border-[#DDD6CB] rounded-3xl p-6 sm:p-10 text-center space-y-5 shadow-sm">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#1F4E3D]/10 text-[#1F4E3D] border border-[#1F4E3D]/20">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wider uppercase bg-[#1F4E3D]/10 text-[#1F4E3D] border border-[#1F4E3D]/20">
             Start Your Preparation Right
           </span>
 
-          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#1B1713]">
+          <h2 className="text-2xl sm:text-4xl font-normal tracking-[-0.03em] text-[#1B1713] leading-[1.15]">
             Ready to Take Control of Your NET Score?
           </h2>
 
-          <p className="text-[#5C544B] text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#5C544B] text-base sm:text-lg font-normal max-w-xl mx-auto leading-relaxed">
             Get instant access to the exact routines, the 3-round math strategy, and the companion FLP diagnostic sheets.
           </p>
 
@@ -475,7 +475,7 @@ export default function Home() {
               Get the Playbook — 650 PKR
             </Button>
 
-            <p className="mt-3 text-xs sm:text-sm text-[#5C544B]">
+            <p className="mt-3 text-xs sm:text-sm text-[#5C544B] font-normal">
               Pay via Easypaisa, JazzCash, NayaPay, or SadaPay • Direct PDF &amp; Sheets email delivery
             </p>
           </div>
@@ -483,10 +483,10 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="pt-8 pb-12 border-t border-[#DDD6CB] text-center space-y-2">
-          <p className="text-xs sm:text-sm text-[#5C544B] font-medium">
+          <p className="text-xs sm:text-sm text-[#5C544B] font-normal">
             Independent student guide. Not an official NUST publication.
           </p>
-          <p className="text-[11px] text-[#5C544B]/80">
+          <p className="text-[11px] text-[#5C544B]/80 font-normal">
             © 2027 The NUST NET Playbook. All rights reserved.
           </p>
         </footer>
@@ -501,7 +501,7 @@ export default function Home() {
           <span className="text-[11px] font-medium text-[#5C544B] uppercase tracking-wide">
             NET-2027 Playbook
           </span>
-          <span className="text-base font-bold text-[#1B1713] leading-none">
+          <span className="text-base font-medium text-[#1B1713] leading-none">
             650 PKR
           </span>
         </div>

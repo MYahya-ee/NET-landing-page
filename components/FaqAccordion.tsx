@@ -50,10 +50,10 @@ export default function FaqAccordion() {
             <button
               type="button"
               onClick={() => toggle(index)}
-              className="w-full flex items-center justify-between p-4 sm:p-5 text-left font-medium text-[#1B1713] transition-colors focus:outline-none"
+              className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-[#1B1713] transition-colors focus:outline-none"
               aria-expanded={isOpen}
             >
-              <span className="text-base sm:text-lg pr-4 font-medium flex items-center gap-2.5">
+              <span className="text-base sm:text-lg pr-4 font-normal flex items-center gap-2.5">
                 {isOpen && (
                   <span className="w-1.5 h-1.5 rounded-full bg-[#1F4E3D] shrink-0" />
                 )}
