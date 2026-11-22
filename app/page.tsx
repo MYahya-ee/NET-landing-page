@@ -348,18 +348,18 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
-                src: "/images/sample-2.png",
-                alt: "Preview of Chapter 1: Know the Test Before You Prepare",
-                label: "PART I / CH.1",
-                title: "Know the Test Before You Prepare",
-                desc: "Learn who can apply, how the test is set up, and how marks are split, before you spend money on more books.",
-              },
-              {
                 src: "/images/sample-1.png",
                 alt: "Cover of The NUST NET Playbook",
                 label: "COVER",
                 title: "107 to 150: The NET Playbook",
                 desc: "The NET-2027 edition, made for Engineering & Computing.",
+              },
+              {
+                src: "/images/sample-2.png",
+                alt: "Preview of Chapter 1: Know the Test Before You Prepare",
+                label: "PART I / CH.1",
+                title: "Know the Test Before You Prepare",
+                desc: "Learn who can apply, how the test is set up, and how marks are split, before you spend money on more books.",
               },
               {
                 src: "/images/sample-3.png",
