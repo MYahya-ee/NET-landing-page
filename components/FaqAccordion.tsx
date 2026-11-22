@@ -45,33 +45,39 @@ export default function FaqAccordion() {
         return (
           <div
             key={index}
-            className={`card-hard-flat overflow-hidden transition-all duration-150 ${
+            className={`card-hard-flat overflow-hidden transition-colors duration-150 ${
               isOpen ? "bg-white" : "bg-white hover:bg-[#FFFAEF]"
             }`}
           >
             <button
               type="button"
               onClick={() => toggle(index)}
-              className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-[#161310] transition-colors focus:outline-none"
+              className="w-full flex items-center justify-between p-4 sm:p-5 text-left text-[#161310] transition-colors focus:outline-none cursor-pointer"
               aria-expanded={isOpen}
             >
               <span className="text-base sm:text-lg pr-4 font-normal flex items-center gap-3">
-                <span className="font-pixel text-xs text-[#6b6459]">
+                <span className="font-pixel text-xs text-[#6b6459] shrink-0">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span>{faq.question}</span>
               </span>
               <ChevronDown
-                className={`w-5 h-5 text-[#6b6459] shrink-0 transition-transform duration-200 ${
+                className={`w-5 h-5 text-[#6b6459] shrink-0 transition-transform duration-200 ease-out ${
                   isOpen ? "rotate-180 text-[#2E5DD6]" : ""
                 }`}
               />
             </button>
-            {isOpen && (
-              <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-[#6b6459] text-sm sm:text-base leading-relaxed border-t border-dashed border-[#e8dfca] pt-3 ml-10 sm:ml-12">
-                {faq.answer}
+            <div
+              className={`grid transition-[grid-template-rows,opacity] duration-200 ease-out ${
+                isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+              }`}
+            >
+              <div className="overflow-hidden">
+                <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-[#6b6459] text-sm sm:text-base leading-relaxed border-t border-dashed border-[#e8dfca] pt-3">
+                  {faq.answer}
+                </div>
               </div>
-            )}
+            </div>
           </div>
         );
       })}

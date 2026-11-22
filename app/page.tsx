@@ -2,6 +2,7 @@ import Image from "next/image";
 import FaqAccordion from "@/components/FaqAccordion";
 import Button from "@/components/Button";
 import Ticker from "@/components/Ticker";
+import MobileStickyBar from "@/components/MobileStickyBar";
 import {
   ShieldCheck,
   Check,
@@ -531,30 +532,9 @@ export default function Home() {
       </footer>
 
       {/* ═══════════════════════════════════════════
-          MOBILE BOTTOM BAR
+          MOBILE SCROLL-TRIGGERED STICKY BAR
       ═══════════════════════════════════════════ */}
-      <aside
-        aria-label="Quick Action"
-        className="sm:hidden fixed bottom-0 left-0 right-0 p-3 bg-[#FFFAEF] border-t-2 border-[#161310] z-50 flex items-center justify-between gap-3"
-      >
-        <div className="flex flex-col">
-          <span className="font-pixel text-[10px] text-[#6b6459] uppercase">
-            NET-2027
-          </span>
-          <span className="text-base font-medium text-[#161310] leading-none">
-            650 PKR
-          </span>
-        </div>
-        <Button
-          href={TALLY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          variant="cobalt"
-          className="py-2.5 px-5 text-sm"
-        >
-          Get Playbook
-        </Button>
-      </aside>
+      <MobileStickyBar tallyUrl={TALLY_URL} />
     </div>
   );
 }
