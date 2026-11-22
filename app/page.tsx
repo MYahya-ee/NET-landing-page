@@ -112,8 +112,8 @@ export default function Home() {
           <div className="flex justify-center gap-3 sm:gap-5 pt-4 sm:pt-6">
             <div className="card-hard-sm -rotate-2 w-28 sm:w-40 aspect-[1/1.414] overflow-hidden hover:rotate-0 transition-transform duration-300 bg-white">
               <Image
-                src="/images/sample-1.png"
-                alt="The NUST NET Playbook Cover"
+                src="/images/sample-2.png"
+                alt="Chapter 1 Preview"
                 width={160}
                 height={226}
                 className="w-full h-full object-contain"
@@ -121,8 +121,8 @@ export default function Home() {
             </div>
             <div className="card-hard-sm rotate-1 w-32 sm:w-44 aspect-[1/1.414] overflow-hidden z-10 hover:rotate-0 transition-transform duration-300 bg-white">
               <Image
-                src="/images/sample-2.png"
-                alt="Chapter 1 Preview"
+                src="/images/sample-1.png"
+                alt="The NUST NET Playbook Cover"
                 width={176}
                 height={249}
                 className="w-full h-full object-contain"
@@ -333,18 +333,18 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
-                src: "/images/sample-1.png",
-                alt: "Sample 1 - The NUST NET Playbook Cover",
-                label: "COVER",
-                title: "107 to 150: The NET Playbook",
-                desc: "NET-2027 Edition cover — the exact independent preparation blueprint for Engineering & Computing.",
-              },
-              {
                 src: "/images/sample-2.png",
                 alt: "Sample 2 - Chapter 1: Know the Test Before You Prepare",
                 label: "PART I / CH.1",
                 title: "Know the Test Before You Prepare",
                 desc: "Stream eligibility, test patterns, and subject weightings before buying more coaching books.",
+              },
+              {
+                src: "/images/sample-1.png",
+                alt: "Sample 1 - The NUST NET Playbook Cover",
+                label: "COVER",
+                title: "107 to 150: The NET Playbook",
+                desc: "NET-2027 Edition cover — the exact independent preparation blueprint for Engineering & Computing.",
               },
               {
                 src: "/images/sample-3.png",
