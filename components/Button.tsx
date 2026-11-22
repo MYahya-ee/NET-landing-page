@@ -6,6 +6,7 @@ interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: "primary" | "secondary" | "cobalt";
   className?: string;
   showArrow?: boolean;
+  arrowClassName?: string;
 }
 
 export default function Button({
@@ -13,6 +14,7 @@ export default function Button({
   variant = "primary",
   className = "",
   showArrow = true,
+  arrowClassName = "w-4 h-4",
   ...props
 }: ButtonProps) {
   let variantClass = "btn-brutal-primary";
@@ -23,7 +25,7 @@ export default function Button({
     <a className={`btn-brutal ${variantClass} ${className}`} {...props}>
       <span>{children}</span>
       {showArrow && (
-        <ArrowRight className="w-4 h-4 shrink-0 btn-arrow" />
+        <ArrowRight className={`${arrowClassName} shrink-0 btn-arrow`} />
       )}
     </a>
   );

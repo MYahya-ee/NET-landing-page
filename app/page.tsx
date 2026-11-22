@@ -30,9 +30,9 @@ export default function Home() {
       {/* ═══════════════════════════════════════════
           NAVIGATION BAR
       ═══════════════════════════════════════════ */}
-      <nav className="w-full bg-[#FFFAEF] border-b-2 border-[#161310] px-4 sm:px-6 py-3 flex items-center justify-between">
+      <nav className="w-full bg-[#FFFAEF] border-b-2 border-[#161310] px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="font-pixel text-lg sm:text-xl text-[#161310] tracking-tight">
+          <span className="font-pixel text-base sm:text-xl text-[#161310] tracking-tight">
             NET◆PLAYBOOK
           </span>
         </div>
@@ -42,7 +42,8 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             variant="cobalt"
-            className="text-sm py-2 px-4"
+            className="!py-1.5 !px-2.5 !text-xs sm:!py-2 sm:!px-4 sm:!text-sm !shadow-[2px_2px_0px_#161310] sm:!shadow-[3px_3px_0px_#161310]"
+            arrowClassName="w-3 h-3 sm:w-3.5 sm:h-3.5"
           >
             Get Playbook
           </Button>
