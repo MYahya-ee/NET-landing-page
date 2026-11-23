@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Pixelify_Sans, Jersey_15 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const googleSansFlex = localFont({
@@ -76,6 +77,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-[#FFFAEF] text-[#161310] font-sans selection:bg-[#161310] selection:text-[#FFFAEF]">
         {children}
+        <Analytics />
       </body>
     </html>
   );
